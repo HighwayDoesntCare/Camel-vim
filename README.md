@@ -29,7 +29,8 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 
 `\vv`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; search the word under cursor in project<br>
 `\vr`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replace the word under cursor in project<br>
-`:ReplaceUndo`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; undo the replace<br>
+`:ReplaceUndo`: undo the replace<br>
+`<C-p>`:&nbsp;&nbsp; search file in project<br>
 
 `F12`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to header file<br>
 `<C-]>`:&nbsp;&nbsp;&nbsp; jump to declaration or to definition<br>
