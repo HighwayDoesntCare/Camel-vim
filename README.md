@@ -61,6 +61,7 @@ https://github.com/tpope/vim-pathogen (start YCM automatically while executing v
 https://github.com/scrooloose/nerdtree<br>
 https://github.com/vim-syntastic/syntastic<br>
 https://github.com/dkprice/vim-easygrep<br>
+https://github.com/ctrlpvim/ctrlp.vim<br>
 https://github.com/scrooloose/nerdcommenter<br>
 https://github.com/vim-scripts/taglist.vim<br>
 https://github.com/vim-scripts/Conque-GDB<br>
