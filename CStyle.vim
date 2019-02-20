@@ -92,6 +92,7 @@ let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1
 let g:ConqueTerm_StartMessages=0
 
+let g:formatdef_my_custom_cs = '"export VERSION_CONTROL=never; indent -bli0 -bls -blf -nbfda -npsl -i4 -ts4"'
 
 nnoremap <F5> :!make<CR>
 
