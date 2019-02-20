@@ -37,6 +37,8 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `<C-o>`:&nbsp;&nbsp; go backword<br>
 `<C-i>`:&nbsp;&nbsp; go forward<br>
 
+`F6`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; format the current file<br>
+
 ### Tips ###
 0) Edit the line 59 to 61 of `ycm_extra_conf.py` to change the searching path of YCM.<br>
 1) `<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.<br>
@@ -68,3 +70,4 @@ https://github.com/vim-scripts/Conque-GDB<br>
 https://github.com/rstacruz/sparkup<br>
 https://github.com/tpope/vim-fugitive<br>
 https://github.com/tomasiser/vim-code-dark<br>
+https://github.com/Chiel92/vim-autoformat<br>
