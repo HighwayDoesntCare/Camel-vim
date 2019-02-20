@@ -92,7 +92,7 @@ let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1
 let g:ConqueTerm_StartMessages=0
 
-let g:formatdef_my_c = '"export VERSION_CONTROL=never; indent -bli0 -blf -bls -nbfda -npsl -i4 -ts4"'
+let g:formatdef_my_c = '"export VERSION_CONTROL=never; indent -bli0 -blf -bls -npcs -nbfda -npsl -i4 -ts4"'
 let g:formatters_c = ['my_c']
 let g:formatters_cpp = ['my_c']
 
