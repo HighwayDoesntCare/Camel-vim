@@ -95,6 +95,7 @@ let g:ConqueTerm_StartMessages=0
 let g:formatdef_my_custom_cs = '"export VERSION_CONTROL=never; indent -bli0 -bls -blf -nbfda -npsl -i4 -ts4"'
 
 nnoremap <F5> :!make<CR>
+nnoremap <F6> :Autoformat<CR>
 
 nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <leader>tg :TlistToggle<CR>
