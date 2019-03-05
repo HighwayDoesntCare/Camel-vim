@@ -1,4 +1,4 @@
-command Q call delete('.ycm_extra_conf.py')|call delete('.tags')|qa
+command Q call delete('.tags')|qa
 "command Qone q|TlistClose
 "cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
@@ -92,12 +92,16 @@ let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1
 let g:ConqueTerm_StartMessages=0
 
-let g:formatdef_my_c = '"export VERSION_CONTROL=never; indent -bli0 -blf -bls -nbfda -npsl -i4 -ts4"'
-let g:formatters_c = ['my_c']
-let g:formatters_cpp = ['my_c']
+"let g:formatdef_my_c = '"uncrustify -c /home/zyh/.vim/.uncrustify.cfg --replace --no-backup $(find ./ -name *.cpp && find ./ -name *.hpp && find ./ -name *.h && find ./ -name *.c)"'
+"let g:formatters_c = ['my_c']
+"let g:formatters_cpp = ['my_c']
 
+let skeletons#autoRegister = 1
+
+let g:uncrustify_config_file=$HOME."/.vim/.uncrustify.cfg"
+"let g:uncrustify_language_mapping={ "c": "c", "cpp": "cpp"}
 nnoremap <F5> :!make<CR>
-nnoremap <F6> :Autoformat<CR>
+nnoremap <F6> :Uncrustify<CR> \| :w<CR>
 
 nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <leader>tg :TlistToggle<CR>

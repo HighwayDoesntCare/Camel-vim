@@ -20,7 +20,6 @@ Plugin 'vim-scripts/Conque-GDB'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'tomasiser/vim-code-dark'
-Plugin 'chiel92/vim-autoformat'
 " sudo apt install ctags
 
 call vundle#end()
