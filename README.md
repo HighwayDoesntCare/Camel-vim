@@ -70,4 +70,5 @@ https://github.com/vim-scripts/Conque-GDB<br>
 https://github.com/rstacruz/sparkup<br>
 https://github.com/tpope/vim-fugitive<br>
 https://github.com/tomasiser/vim-code-dark<br>
-https://github.com/Chiel92/vim-autoformat<br>
+https://github.com/uncrustify/uncrustify<br>
+https://github.com/embear/vim-uncrustify<br>
