@@ -16,7 +16,7 @@ echo "alias vimc=\"vim --cmd 'let CStyle=1'\"" >> ~/.bashrc
 git clone https://github.com/universal-ctags/ctags.git
 cd ctags && ./autogen.sh && ./configure && make -j8 && sudo make install && cd .. && rm -rf ctags
 
-https://github.com/uncrustify/uncrustify.git
+git clone https://github.com/uncrustify/uncrustify.git
 cd uncrustify && mkdir build && cd build && cmake .. && make && sudo make install && cd ../.. && rm -rf uncrustify
 
 wget https://mirrors.ustc.edu.cn/gnu/indent/indent-2.2.7.tar.gz
