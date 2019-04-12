@@ -1,5 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
+hash gcc 2>/dev/null || { echo >&2 "gcc is not installed.  Aborting."; exit 1; }
+hash cmake 2>/dev/null || { echo >&2 "python is not installed.  Aborting."; exit 1; }
+hash make 2>/dev/null || { echo >&2 "python is not installed.  Aborting."; exit 1; }
+hash python 2>/dev/null || { echo >&2 "python is not installed.  Aborting."; exit 1; }
+hash git 2>/dev/null || { echo >&2 "git is not installed.  Aborting."; exit 1; }
+hash vim 2>/dev/null || { echo >&2 "vim is not installed.  Aborting."; exit 1; }
+py_version=$(python --version 2>&1)
+#py_version="Python 2.7.12"
+if [[ ! ${py_version} =~ ^Python[[:space:]]2.* ]]; then
+    echo >&2 "the version of python is not 2. Aborting."
+    exit 1
+fi
 
 mkdir ~/.vim 2>/dev/null
 
