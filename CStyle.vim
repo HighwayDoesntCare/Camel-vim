@@ -4,6 +4,7 @@ command Q call delete('.tags')|qa
 command Html s/<[^>]*/\r&/g|g/^$/d
 command Gdb ConqueGdb
 
+set updatetime=4500
 set completeopt=menu,preview,longest
 set completeopt-=preview
 set conceallevel=2
@@ -23,6 +24,7 @@ else
     autocmd VimEnter * silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags' &
     au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags' &
 endif
+autocmd CursorHold,CursorHoldI * update
 
 let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|.hpp\|\.cpp\|makefile\|Makefile\|\.html\)\@<!$[[file]]', 'bin']
 let NERDTreeAutoDeleteBuffer=1
