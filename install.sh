@@ -31,10 +31,6 @@ cd ctags && ./autogen.sh && ./configure && make -j8 && sudo make install && cd .
 git clone https://github.com/uncrustify/uncrustify.git
 cd uncrustify && mkdir build && cd build && cmake .. && make && sudo make install && cd ../.. && rm -rf uncrustify
 
-wget https://mirrors.ustc.edu.cn/gnu/indent/indent-2.2.7.tar.gz
-tar -xzvf indent-2.2.7.tar.gz
-cd indent-2.2.7 && ./configure && make && sudo make install && cd .. && rm -rf indent-2.2.7*
-
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
