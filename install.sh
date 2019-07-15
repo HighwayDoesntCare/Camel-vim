@@ -6,6 +6,8 @@ hash make 2>/dev/null || { echo >&2 "make is not installed.  Aborting."; exit 1;
 hash python 2>/dev/null || { echo >&2 "python is not installed.  Aborting."; exit 1; }
 hash git 2>/dev/null || { echo >&2 "git is not installed.  Aborting."; exit 1; }
 hash vim 2>/dev/null || { echo >&2 "vim is not installed.  Aborting."; exit 1; }
+hash autoreconf 2>/dev/null || { echo >&2 "automake is not installed.  Aborting."; exit 1; }
+hash pkg-config 2>/dev/null || { echo >&2 "pkg-config is not installed.  Aborting."; exit 1; }
 py_version=$(python --version 2>&1)
 #py_version="Python 2.7.12"
 if [[ ! ${py_version} =~ ^Python[[:space:]]2.* ]]; then
@@ -30,6 +32,8 @@ cd ctags && ./autogen.sh && ./configure && make -j8 && sudo make install && cd .
 
 git clone https://github.com/uncrustify/uncrustify.git
 cd uncrustify && mkdir build && cd build && cmake .. && make && sudo make install && cd ../.. && rm -rf uncrustify
+
+apt install python-dev python-requests
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
