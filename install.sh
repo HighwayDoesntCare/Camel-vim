@@ -33,7 +33,7 @@ cd ctags && ./autogen.sh && ./configure && make -j8 && sudo make install && cd .
 git clone https://github.com/uncrustify/uncrustify.git
 cd uncrustify && mkdir build && cd build && cmake .. && make && sudo make install && cd ../.. && rm -rf uncrustify
 
-apt install python-dev python-requests
+apt install python-dev python-requests golang-go
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
