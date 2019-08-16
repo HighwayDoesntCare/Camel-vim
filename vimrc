@@ -70,7 +70,7 @@ hi! Normal ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=blue ctermbg=black
 hi Visual cterm=bold ctermbg=DarkCyan ctermfg=White
 hi Search cterm=bold ctermbg=DarkCyan ctermfg=White
-hi MatchParen cterm=reverse ctermbg=NONE ctermfg=NONE
+hi MatchParen cterm=underline ctermbg=NONE ctermfg=DarkCyan
 hi StatusLine ctermbg=White ctermfg=DarkGrey
 
 set matchpairs+=<:>
