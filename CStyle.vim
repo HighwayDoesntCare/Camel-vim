@@ -21,8 +21,8 @@ if has('macunix')
     autocmd VimEnter * silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
     au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
 else
-    autocmd VimEnter * silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags' &
-    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags' &
+    autocmd VimEnter * silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
+    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
 endif
 autocmd CursorHold,CursorHoldI * update
 
@@ -101,6 +101,7 @@ let g:ConqueTerm_StartMessages=0
 let skeletons#autoRegister = 1
 
 let g:uncrustify_config_file=$HOME."/.vim/.uncrustify.cfg"
+"let g:uncrustify_config_file=$HOME."/.vim/.uncrustify_K_and_R.cfg"
 "let g:uncrustify_language_mapping={ "c": "c", "cpp": "cpp"}
 nnoremap <F5> :!make<CR>
 nnoremap <F6> :Uncrustify<CR> \| :w<CR>
