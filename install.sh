@@ -20,6 +20,7 @@ mkdir ~/.vim 2>/dev/null
 cp ./vimrc ~/.vimrc
 cp ./ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 cp ./uncrustify.cfg ~/.vim/.uncrustify.cfg
+cp ./uncrustify_K_and_R.cfg ~/.vim/.uncrustify_K_and_R.cfg
 cp ./*.vim ~/.vim/
 
 sed -i '/CStyle=1/c\' ~/.bashrc
