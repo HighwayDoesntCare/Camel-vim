@@ -52,4 +52,4 @@ cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
 
 vim -E -c PluginInstall -c q -c q
 
-echo "done."
+echo "Done."
