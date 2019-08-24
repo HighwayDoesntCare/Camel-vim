@@ -21,6 +21,7 @@ if ! python -c "import requests" &> /dev/null; then
     exit 1
 fi
 
+rm -rf ~/.vim ~/.vimrc
 mkdir ~/.vim 2>/dev/null
 
 cp ./vimrc ~/.vimrc
