@@ -8,13 +8,17 @@ hash git 2>/dev/null || { echo >&2 "git is not installed.  Aborting."; exit 1; }
 hash vim 2>/dev/null || { echo >&2 "vim is not installed.  Aborting."; exit 1; }
 hash autoreconf 2>/dev/null || { echo >&2 "automake is not installed.  Aborting."; exit 1; }
 hash pkg-config 2>/dev/null || { echo >&2 "pkg-config is not installed.  Aborting."; exit 1; }
+hash go 2>/dev/null || { echo >&2 "golang-go is not installed.  Aborting."; exit 1; }
 py_version=$(python --version 2>&1)
 #py_version="Python 2.7.12"
 if [[ ! ${py_version} =~ ^Python[[:space:]]2.* ]]; then
     echo >&2 "the version of python is not 2. Aborting."
     exit 1
 fi
-sudo apt install python-dev python-requests golang-go
+if ! python -c "import requests" &> /dev/null; then
+    echo >&2 "python-requests is not installed. Aborting."
+    exit 1
+fi
 
 mkdir ~/.vim 2>/dev/null
 
