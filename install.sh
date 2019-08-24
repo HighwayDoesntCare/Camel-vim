@@ -14,6 +14,7 @@ if [[ ! ${py_version} =~ ^Python[[:space:]]2.* ]]; then
     echo >&2 "the version of python is not 2. Aborting."
     exit 1
 fi
+sudo apt install python-dev python-requests golang-go
 
 mkdir ~/.vim 2>/dev/null
 
@@ -28,13 +29,13 @@ sed -i '/CStyle=1/c\' ~/.bashrc
 echo "alias vimc=\"vim --cmd 'let CStyle=1'\"" >> ~/.bashrc
 #echo "alias vimpy=\"vim --cmd 'let python=1'\"" >> ~/.bashrc
 
+rm -rf ctags
 git clone https://github.com/universal-ctags/ctags.git
 cd ctags && ./autogen.sh && ./configure && make -j8 && sudo make install && cd .. && rm -rf ctags
 
+rm -rf uncrustify
 git clone https://github.com/uncrustify/uncrustify.git
 cd uncrustify && mkdir build && cd build && cmake .. && make && sudo make install && cd ../.. && rm -rf uncrustify
-
-sudo apt install python-dev python-requests golang-go
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
