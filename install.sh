@@ -24,7 +24,7 @@ cp ./uncrustify_K_and_R.cfg ~/.vim/.uncrustify_K_and_R.cfg
 cp ./*.vim ~/.vim/
 
 sed -i '/CStyle=1/c\' ~/.bashrc
-sed -i '/python=1/c\' ~/.bashrc
+#sed -i '/python=1/c\' ~/.bashrc
 echo "alias vimc=\"vim --cmd 'let CStyle=1'\"" >> ~/.bashrc
 #echo "alias vimpy=\"vim --cmd 'let python=1'\"" >> ~/.bashrc
 
@@ -34,11 +34,12 @@ cd ctags && ./autogen.sh && ./configure && make -j8 && sudo make install && cd .
 git clone https://github.com/uncrustify/uncrustify.git
 cd uncrustify && mkdir build && cd build && cmake .. && make && sudo make install && cd ../.. && rm -rf uncrustify
 
-apt install python-dev python-requests golang-go
+sudo apt install python-dev python-requests golang-go
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
+cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x/tools && git clone https://github.com/golang/tools.git
 
 cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
 
