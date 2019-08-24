@@ -9,7 +9,7 @@ It allows you to jump to header files, to declaration and to definition recusive
 
 
 ### Installation ###
-Execute `sudo ./install.sh`.<br>
+Execute `./install.sh`.<br>
 
 
 ### General Usage ###
