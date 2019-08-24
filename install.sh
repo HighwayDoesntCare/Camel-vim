@@ -40,7 +40,7 @@ cd uncrustify && mkdir build && cd build && cmake .. && make && sudo make instal
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
-cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x/tools && git clone https://github.com/golang/tools.git
+cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x/ && git clone https://github.com/golang/tools.git
 
 cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
 
