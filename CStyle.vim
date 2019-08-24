@@ -1,4 +1,4 @@
-command Q call delete('.tags')|qa
+command Q call delete('.tags')|call delete('.clang-format')|qa
 "command Qone q|TlistClose
 "cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
@@ -18,11 +18,11 @@ execute pathogen#infect()
 
 set tags=.tags
 if has('macunix')
-    autocmd VimEnter * silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
+    autocmd VimEnter * silent! !eval 'cp ~/.vim/.clang-format ./; ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
     au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
 else
-    autocmd VimEnter * silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
-    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
+    autocmd VimEnter * silent! !eval 'cp ~/.vim/.clang-format ./; ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags' &
+    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags' &
 endif
 autocmd CursorHold,CursorHoldI * update
 
@@ -94,17 +94,12 @@ let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1
 let g:ConqueTerm_StartMessages=0
 
-"let g:formatdef_my_c = '"uncrustify -c /home/zyh/.vim/.uncrustify.cfg --replace --no-backup $(find ./ -name *.cpp && find ./ -name *.hpp && find ./ -name *.h && find ./ -name *.c)"'
-"let g:formatters_c = ['my_c']
-"let g:formatters_cpp = ['my_c']
-
 let skeletons#autoRegister = 1
 
-let g:uncrustify_config_file=$HOME."/.vim/.uncrustify.cfg"
-"let g:uncrustify_config_file=$HOME."/.vim/.uncrustify_K_and_R.cfg"
-"let g:uncrustify_language_mapping={ "c": "c", "cpp": "cpp"}
-nnoremap <F5> :!make<CR>
-nnoremap <F6> :Uncrustify<CR> \| :w<CR>
+let g:formatdef_my_custom_cpp = '"clang-format -i ".@%'
+let g:formatters_cpp = ['my_custom_cpp']
+
+nnoremap <F6> :w<CR> \| :Autoformat<CR> \| :e<CR>
 
 nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <leader>tg :TlistToggle<CR>

@@ -16,11 +16,11 @@ Plugin 'dkprice/vim-easygrep'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'taglist.vim'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-scripts/Conque-GDB'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'tomasiser/vim-code-dark'
-" sudo apt install ctags
 
 call vundle#end()
 
@@ -47,6 +47,7 @@ set smarttab
 set expandtab
 set softtabstop=4
 set matchtime=2
+set formatoptions-=cro
 set statusline=%<%f\ %h%m%r\ %y%=%{v:register}\ %-14.(%l,%c%V%)\ %P
 
 set hlsearch

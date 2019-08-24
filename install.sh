@@ -9,7 +9,8 @@ hash git 2>/dev/null || { echo >&2 "git is not installed.  Aborting."; exit 1; }
 hash vim 2>/dev/null || { echo >&2 "vim is not installed.  Aborting."; exit 1; }
 hash autoreconf 2>/dev/null || { echo >&2 "automake is not installed.  Aborting."; exit 1; }
 hash pkg-config 2>/dev/null || { echo >&2 "pkg-config is not installed.  Aborting."; exit 1; }
-hash go 2>/dev/null || { echo >&2 "golang-go is not installed.  Aborting."; exit 1; }
+hash ctags 2>/dev/null || { echo >&2 "ctags is not installed.  Aborting."; exit 1; }
+hash clang-format 2>/dev/null || { echo >&2 "clang-format is not installed.  Aborting."; exit 1; }
 py_version=$(python --version 2>&1)
 #py_version="Python 2.7.12"
 if [[ ! ${py_version} =~ ^Python[[:space:]]2.* ]]; then
@@ -21,13 +22,30 @@ if ! python -c "import requests" &> /dev/null; then
     exit 1
 fi
 
+echo "YCM can support golang only if golang with the minimum version 1.11 has been installed. Otherwise, YCM can not support golang."
+while true; do
+    read -r -p "Continue? [Y/n] " input
+    case $input in
+        [yY][eE][sS]|[yY])
+            break
+            ;;
+        [nN][oO]|[nN])
+            echo 'Abort.'
+            exit 1
+            ;;
+        *)
+            echo "Invalid input..."
+            ;;
+    esac
+done
+
+
 rm -rf ~/.vim ~/.vimrc
 mkdir ~/.vim 2>/dev/null
 
 cp ./vimrc ~/.vimrc
 cp ./ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
-cp ./uncrustify.cfg ~/.vim/.uncrustify.cfg
-cp ./uncrustify_K_and_R.cfg ~/.vim/.uncrustify_K_and_R.cfg
+cp ./clang-format.conf ~/.vim/.clang-format
 cp ./*.vim ~/.vim/
 
 sed -i '/CStyle=1/c\' ~/.bashrc
@@ -35,17 +53,8 @@ sed -i '/CStyle=1/c\' ~/.bashrc
 echo "alias vimc=\"vim --cmd 'let CStyle=1'\"" >> ~/.bashrc
 #echo "alias vimpy=\"vim --cmd 'let python=1'\"" >> ~/.bashrc
 
-rm -rf ctags
-git clone https://github.com/universal-ctags/ctags.git
-cd ctags && ./autogen.sh && ./configure && make -j8 && sudo make install && cd .. && rm -rf ctags
-
-rm -rf uncrustify
-git clone https://github.com/uncrustify/uncrustify.git
-cd uncrustify && mkdir build && cd build && cmake .. && make && sudo make install && cd ../.. && rm -rf uncrustify
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-cd ~/.vim/bundle && git clone https://github.com/embear/vim-uncrustify.git
 
 cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
 cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
