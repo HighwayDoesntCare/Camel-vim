@@ -41,11 +41,10 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 
 ### Tips ###
 0) Edit the line 59 to 61 of `ycm_extra_conf.py` to change the searching path of YCM.<br>
-1) Comment/uncomment the line 103 or the line 104 of `CStyle.vim` to use K&R code style or not.<br>
-2) `<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.<br>
-3) For huge/distributed projects, use `F12` before `<C-]>` is recommended if possible.<br>
-4) If `tags file not ready` is printed while typing `<C-]>` or `g<C-]>`, it means that the file `.tags` hasn't been generated yet by `ctags`. It is probably because that the project is so huge that `ctags` needs some time to generate the `.tags`.
-5) `:help syntastic_quiet_messages` to avoid unexpected error messages from syntastic.
+1) `<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.<br>
+2) For huge/distributed projects, use `F12` before `<C-]>` is recommended if possible.<br>
+3) If `tags file not ready` is printed while typing `<C-]>` or `g<C-]>`, it means that the file `.tags` hasn't been generated yet by `ctags`. It is probably because that the project is so huge that `ctags` needs some time to generate the `.tags`.
+4) `:help syntastic_quiet_messages` to avoid unexpected error messages from syntastic.
 
 
 ### Some bugs ###
