@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 hash gcc 2>/dev/null || { echo >&2 "gcc is not installed.  Aborting."; exit 1; }
 hash cmake 2>/dev/null || { echo >&2 "cmake is not installed.  Aborting."; exit 1; }
 hash make 2>/dev/null || { echo >&2 "make is not installed.  Aborting."; exit 1; }
@@ -10,7 +11,6 @@ hash vim 2>/dev/null || { echo >&2 "vim is not installed.  Aborting."; exit 1; }
 hash autoreconf 2>/dev/null || { echo >&2 "automake is not installed.  Aborting."; exit 1; }
 hash pkg-config 2>/dev/null || { echo >&2 "pkg-config is not installed.  Aborting."; exit 1; }
 hash ctags 2>/dev/null || { echo >&2 "ctags is not installed.  Aborting."; exit 1; }
-hash clang-format 2>/dev/null || { echo >&2 "clang-format is not installed.  Aborting."; exit 1; }
 py_version=$(python --version 2>&1)
 #py_version="Python 2.7.12"
 if [[ ! ${py_version} =~ ^Python[[:space:]]2.* ]]; then
@@ -62,9 +62,20 @@ rm -rf ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/cregex
 cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x/ && git clone https://github.com/golang/tools.git
 cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
 
-
 ~/.vim/bundle/YouCompleteMe/install.py --all
 
 vim -E -c PluginInstall -c q -c q
+
+
+version=$(clang-format --version 2>/dev/null)
+found=$?
+if [[ ${found} == 0 ]]; then
+    res=$(echo $version | cut -d " " -f 3 | cut -d "." -f 1)
+fi
+if [[ ${found} != 0 || ${res} < 5 ]]; then
+    echo "clang-format with the minimum version 5.0 is necessary to format code. Otherwise, the formatter can not work."
+    read -n 1 -s -r -p "Press any key to continue...";
+fi
+
 
 echo "Done."
