@@ -16,11 +16,11 @@ hash ctags 2>/dev/null || { echo >&2 "ctags is not installed.  Aborting."; exit 
 py_version=$(python --version 2>&1)
 #py_version="Python 2.7.12"
 if [[ ! ${py_version} =~ ^Python[[:space:]]2.* ]]; then
-    echo >&2 "the version of python is not 2. Aborting."
+    echo >&2 "the version of python is not 2.  Aborting."
     exit 1
 fi
 if ! python -c "import requests" &> /dev/null; then
-    echo >&2 "python-requests is not installed. Aborting."
+    echo >&2 "python-requests is not installed.  Aborting."
     exit 1
 fi
 
