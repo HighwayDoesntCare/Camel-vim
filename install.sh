@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+set -e
+
 hash gcc 2>/dev/null || { echo >&2 "gcc is not installed.  Aborting."; exit 1; }
 hash cmake 2>/dev/null || { echo >&2 "cmake is not installed.  Aborting."; exit 1; }
 hash make 2>/dev/null || { echo >&2 "make is not installed.  Aborting."; exit 1; }
