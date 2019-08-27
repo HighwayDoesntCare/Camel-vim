@@ -79,6 +79,14 @@ let g:syntastic_cpp_compiler = 'gcc'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_quiet_messages = {'regex': 'No such file or directory'}
 
+let g:NERDSpaceDelims=1
+let g:NERDCompactSexyComs=1
+let g:NERDDefaultAlign = 'left'
+let g:NERDAltDelims_java=1
+let g:NERDCommentEmptyLines=1
+let g:NERDTrimTrailingWhitespace=1
+let g:NERDToggleCheckAllLines=1
+
 let g:ConqueGdb_Leader='<Leader>'
 let g:ConqueGdb_Run=g:ConqueGdb_Leader . 'r'
 let g:ConqueGdb_Continue=g:ConqueGdb_Leader . 'c'
