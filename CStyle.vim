@@ -108,6 +108,10 @@ let g:NERDAltDelims_java=1
 let g:NERDCommentEmptyLines=1
 let g:NERDTrimTrailingWhitespace=1
 let g:NERDToggleCheckAllLines=1
+let g:NERDCustomDelimiters = {
+\   'c': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+\   'cpp': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+\}
 
 let g:ConqueGdb_Leader='<Leader>'
 let g:ConqueGdb_Run=g:ConqueGdb_Leader . 'r'
