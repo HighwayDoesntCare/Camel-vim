@@ -133,7 +133,7 @@ let skeletons#autoRegister = 1
 let g:formatdef_my_custom_cpp = '"clang-format -i ".@%'
 let g:formatters_cpp = ['my_custom_cpp']
 
-nnoremap <F6> :w<CR> \| :Autoformat<CR> \| :e<CR>
+nnoremap <F6> :w<CR> \| :Autoformat<CR> \| :w<CR> \| :e<CR>
 
 nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <leader>tg :TlistToggle<CR>
