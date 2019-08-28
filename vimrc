@@ -20,6 +20,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-scripts/Conque-GDB'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'tpope/vim-fugitive'
+Plugin 'Yggdroot/indentLine'
 Plugin 'tomasiser/vim-code-dark'
 
 call vundle#end()
