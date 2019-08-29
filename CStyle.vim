@@ -128,6 +128,10 @@ let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1
 let g:ConqueTerm_StartMessages=0
 
+let g:indentLine_enabled = 1
+let g:indentLine_char = '┆'
+"let g:indentLine_color_term = 0
+
 let skeletons#autoRegister = 1
 
 let g:formatdef_my_custom_cpp = '"clang-format -i ".@%'
