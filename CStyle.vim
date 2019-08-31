@@ -18,11 +18,11 @@ execute pathogen#infect()
 
 set tags=.tags
 if has('macunix')
-    autocmd VimEnter * silent! !eval 'cp ~/.vim/.clang-format ./; ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
-    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
+    autocmd VimEnter * silent! !eval 'cp ~/.vim/.clang-format ./; ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags'
+    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags'
 else
-    autocmd VimEnter * silent! !eval 'cp ~/.vim/.clang-format ./; ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags' &
-    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags' &
+    autocmd VimEnter * silent! !eval 'cp ~/.vim/.clang-format ./; ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
+    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
 endif
 autocmd CursorHold,CursorHoldI * update
 
