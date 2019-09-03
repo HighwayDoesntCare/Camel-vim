@@ -48,7 +48,7 @@ mkdir ~/.vim 2>/dev/null
 
 cp ./vimrc ~/.vimrc
 cp ./ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
-cp ./clang-format.conf ~/.vim/.clang-format
+cp ./clang-format.conf ~/.vim/
 cp ./*.vim ~/.vim/
 cp -r ./templates ~/.vim/
 

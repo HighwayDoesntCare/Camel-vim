@@ -16,12 +16,13 @@ let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 autocmd VimEnter * NERDTree
 execute pathogen#infect()
 
+
 set tags=.tags
 if has('macunix')
-    autocmd VimEnter * silent! !eval 'cp ~/.vim/.clang-format ./; ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags'
+    autocmd VimEnter * silent! !eval 'cp ~/.vim/clang-format.conf ./.clang-format; ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags'
     au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags'
 else
-    autocmd VimEnter * silent! !eval 'cp ~/.vim/.clang-format ./; ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
+    autocmd VimEnter * silent! !eval 'cp ~/.vim/clang-format.conf ./.clang-format; ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
     au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
 endif
 autocmd CursorHold,CursorHoldI * update
@@ -136,6 +137,8 @@ let skeletons#autoRegister = 1
 
 let g:formatdef_my_custom_cpp = '"clang-format -i ".@%'
 let g:formatters_cpp = ['my_custom_cpp']
+
+nnoremap cgt :wa<CR> \| :2,$tabdo :tabc<CR> \| <C-w><C-j> :q<CR>
 
 nnoremap <F6> :w<CR> \| :Autoformat<CR> \| :w<CR> \| :e<CR>
 
