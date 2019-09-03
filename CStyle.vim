@@ -2,7 +2,6 @@ command Q call delete('.tags')|call delete('.clang-format')|qa
 "command Qone q|TlistClose
 "cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
-command Gdb ConqueGdb
 
 set updatetime=4500
 set completeopt=menu,preview,longest
@@ -113,17 +112,6 @@ let g:NERDCustomDelimiters = {
 \   'c': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
 \   'cpp': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
 \}
-
-let g:ConqueGdb_Leader='<Leader>'
-let g:ConqueGdb_Run=g:ConqueGdb_Leader . 'r'
-let g:ConqueGdb_Continue=g:ConqueGdb_Leader . 'c'
-let g:ConqueGdb_Next=g:ConqueGdb_Leader . 'n'
-let g:ConqueGdb_Step=g:ConqueGdb_Leader . 's'
-let g:ConqueGdb_Print=g:ConqueGdb_Leader . 'p'
-let g:ConqueGdb_SetBreak=g:ConqueGdb_Leader . 'b'
-let g:ConqueGdb_DeleteBreak=g:ConqueGdb_Leader . 'd'
-let g:ConqueGdb_Finish=g:ConqueGdb_Leader . 'f'
-let g:ConqueGdb_Backtrace=g:ConqueGdb_Leader . 't'
 
 let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1

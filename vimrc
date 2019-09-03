@@ -17,7 +17,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'taglist.vim'
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'vim-scripts/Conque-GDB'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'Yggdroot/indentLine'

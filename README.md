@@ -78,7 +78,6 @@ https://github.com/dkprice/vim-easygrep<br>
 https://github.com/ctrlpvim/ctrlp.vim<br>
 https://github.com/scrooloose/nerdcommenter<br>
 https://github.com/vim-scripts/taglist.vim<br>
-https://github.com/vim-scripts/Conque-GDB<br>
 https://github.com/rstacruz/sparkup<br>
 https://github.com/tpope/vim-fugitive<br>
 https://github.com/Yggdroot/indentLine<br>
