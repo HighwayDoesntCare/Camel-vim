@@ -139,6 +139,7 @@ let g:formatdef_my_custom_cpp = '"clang-format -i ".@%'
 let g:formatters_cpp = ['my_custom_cpp']
 
 nnoremap cgt :wa<CR> \| :2,$tabdo :tabc<CR> \| <C-w><C-j> :q<CR>
+nmap <leader>cv <leader>ca<leader>cc<leader>ca
 
 nnoremap <F6> :w<CR> \| :Autoformat<CR> \| :w<CR> \| :e<CR>
 
