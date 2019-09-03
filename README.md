@@ -39,7 +39,7 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `\vr`: replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br>
 `cgt`: save changes and close all tabs except the first, then close the bottom-right window (`\vr`+`cgt` is recommanded)<br>
 
-`<F12>`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to header file<br>
+`<F12>`:&nbsp;&nbsp;&nbsp;&nbsp; jump to header file<br>
 `<C-]>`:&nbsp;&nbsp;&nbsp; jump to declaration or to definition<br>
 `g<C-]>`:&nbsp; jump to the only match or list multi matches<br>
 `<C-o>`:&nbsp;&nbsp; go backword<br>
