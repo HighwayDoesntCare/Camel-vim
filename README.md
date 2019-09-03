@@ -32,6 +32,7 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `<C-p>`:&nbsp;&nbsp;&nbsp; search file in project<br>
 `\vv`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; search the word under cursor in project<br>
 `\vr`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br>
+`cgt`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; save all changes in buffer and close all tabs except the first, and close the bottom-right window (`cgt` normally follows `\vr`)<br>
 
 `F12`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to header file<br>
 `<C-]>`:&nbsp;&nbsp;&nbsp; jump to declaration or to definition<br>
