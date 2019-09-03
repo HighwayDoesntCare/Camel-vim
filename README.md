@@ -21,19 +21,22 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 
 
 
-`:Q`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quit vim and all plugins, delete `.ycm_extra_conf.py`, `.clang-format` and `.tags` in the root of project<br>
+`:Q<CR>`: quit vim and all plugins, delete `.ycm_extra_conf.py`, `.clang-format` and `.tags` in the root of project<br>
 
-`\tg`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; open or close the window of taglist<br>
+`\tg`: open or close the window of taglist<br>
 
-`\cc`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comment one line<br>
-`\cm`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comment multi lines<br>
-`\cu`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uncomment<br>
+`F6`: format the current file<br>
+
+`\cc`: comment one line<br>
+`\cm`: comment multi lines<br>
+`\c$`: comment to end of line<br>
+`\cu`: uncomment<br>
 
 `<C-p>`: search file in project<br>
 
-`\vv`:&nbsp; search the word under cursor in project<br>
-`\vr`:&nbsp; replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br>
-`cgt`:&nbsp; save changes and close all tabs except the first, then close the bottom-right window (`\vr`+`cgt` is recommanded)<br>
+`\vv`: search the word under cursor in project<br>
+`\vr`: replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br>
+`cgt`: save changes and close all tabs except the first, then close the bottom-right window (`\vr`+`cgt` is recommanded)<br>
 
 `F12`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to header file<br>
 `<C-]>`:&nbsp;&nbsp;&nbsp; jump to declaration or to definition<br>
@@ -41,7 +44,7 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `<C-o>`:&nbsp;&nbsp; go backword<br>
 `<C-i>`:&nbsp;&nbsp; go forward<br>
 
-`F6`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; format the current file<br>
+
 
 To get more information about usage, click on the links at the References below.
 
