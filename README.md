@@ -50,7 +50,8 @@ To get more information about usage, click on the links at the References below.
 2) `<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.<br>
 3) For huge/distributed projects, use `F12` before `<C-]>` is recommended if possible.<br>
 4) If `tags file not ready` is printed while typing `<C-]>` or `g<C-]>`, it means that the file `.tags` hasn't been generated yet by `ctags`. It is probably because that the project is so huge that `ctags` needs some time to generate the `.tags`.<br>
-5) `:help syntastic_quiet_messages` to avoid unexpected error messages from syntastic.
+5) After typing `C-p` and selecting a file, type `F12` is recommanded to refresh the Nerdtree.<br>
+6) `:help syntastic_quiet_messages` to avoid unexpected error messages from syntastic.
 
 
 ### Some bugs ###
