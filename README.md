@@ -29,10 +29,10 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `\cm`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comment multi lines<br>
 `\cu`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uncomment<br>
 
-`<C-p>`:&nbsp;&nbsp;&nbsp; search file in project<br>
-`\vv`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; search the word under cursor in project<br>
-`\vr`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br>
-`cgt`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; save all changes in buffer, close all tabs except the first, close the bottom-right window (following `\vr` is recommanded)<br>
+`<C-p>`: search file in project<br>
+`\vv`:&nbsp;&nbsp;&nbsp;&nbsp; search the word under cursor in project<br>
+`\vr`:&nbsp;&nbsp;&nbsp;&nbsp; replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br>
+`cgt`:&nbsp;&nbsp;&nbsp;&nbsp; save all changes in buffer, close all tabs except the first, close the bottom-right window (following `\vr` is recommanded)<br>
 
 `F12`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to header file<br>
 `<C-]>`:&nbsp;&nbsp;&nbsp; jump to declaration or to definition<br>
