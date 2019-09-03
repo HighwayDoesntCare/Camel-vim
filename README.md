@@ -28,6 +28,7 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `F6`: format the current file<br>
 
 `\cc`: comment one line<br>
+`\cv`: comment one line with next delimiter.<br>
 `\cm`: comment multi lines<br>
 `\c$`: comment to end of line<br>
 `\cu`: uncomment<br>
