@@ -1,9 +1,9 @@
-CStyle-vim-config
+Pomme-c-vim
 ==========================
 
 
 ### Introduction ###
-Install and configure the YouCompleteMe and some other plugins to build the vim environment for C/C++ project.<br>
+Pomme-c-vim can build a vim-plugin-based environment for c/c++. It will install and configure the YouCompleteMe and some other plugins.<br>
 It allows you to search and replace words, comment and uncomment codes.<br>
 It allows you to jump to header file, to declaration and to definition recusively.<br>
 It allows you to create files with templates.<br>
