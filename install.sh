@@ -25,6 +25,7 @@ if ! python -c "import requests" &> /dev/null; then
 fi
 
 echo "YCM can support golang only if golang with the minimum version 1.11 has been installed. Otherwise, YCM can not support golang."
+echo "Your ~/.vim and ~/.vimrc will be completely deleted to generate the new ones."
 while true; do
     read -r -p "Continue? [Y/n] " input
     case $input in
