@@ -27,6 +27,14 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 
 `<F6>`: format the current file<br>
 
+`mh`: move cursor to left window<br>
+`mj`: move cursor to bottom window<br>
+`mk`: move cursor to top window<br>
+`ml`: move cursor to right window<br>
+
+`<C-j>`: switch current line with next line<br>
+`<C-k>`: switch current line with previous line<br>
+
 `\cc`: comment one line<br>
 `\cv`: comment one line with next delimiter.<br>
 `\cm`: comment multi lines<br>
