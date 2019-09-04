@@ -131,8 +131,14 @@ nmap <leader>cv <leader>ca<leader>cc<leader>ca
 
 nnoremap <F6> :w<CR> \| :Autoformat<CR> \| :w<CR> \| :e<CR>
 
-nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <leader>tg :TlistToggle<CR>
+
+nnoremap mh <C-w><C-h>
+nnoremap mj <C-w><C-j>
+nnoremap mk <C-w><C-k>
+nnoremap ml <C-w><C-l>
+
+nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 function! Jump(type)
