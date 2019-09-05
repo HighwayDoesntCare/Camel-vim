@@ -1,4 +1,5 @@
-command Q call delete('.tags')|call delete('.clang-format')|qa
+command Q qa
+"command Q call delete('.tags')|call delete('.clang-format')|qa
 "command Qone q|TlistClose
 "cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
@@ -15,6 +16,8 @@ let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 autocmd VimEnter * NERDTree
 execute pathogen#infect()
 
+
+autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format'
 
 set tags=.tags
 if has('macunix')
