@@ -140,6 +140,10 @@ nnoremap mh <C-w><C-h>
 nnoremap mj <C-w><C-j>
 nnoremap mk <C-w><C-k>
 nnoremap ml <C-w><C-l>
+nnoremap mw <C-w><C-w>
+nnoremap mt <C-w><C-t>
+nnoremap mb <C-w><C-b>
+nnoremap mp <C-w><C-p>
 
 nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| :wincmd p<CR>
