@@ -67,6 +67,8 @@ syntax on
 
 set background=dark
 colorscheme codedark
+set t_Co=256
+
 hi! Normal ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=blue ctermbg=black
 hi Visual cterm=bold ctermbg=DarkCyan ctermfg=White
