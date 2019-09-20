@@ -50,8 +50,10 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `:Grep [keyword]`: search the keyword in project<br>
 
 `\vv`: search the word under cursor in project<br>
-`\vr`: replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br>
-`cgt`: save changes and close all tabs except the first, then close the bottom-right window (`\vr`+`cgt` is recommanded)<br>
+`\vr`: replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br> 
+`cgt`: save changes and close all tabs except the first, then close the bottom-right window<br>
+
+`:ccl<CR>`: close `Grep` window<br>
 
 `<F12>`:&nbsp;&nbsp;&nbsp; jump to header file<br>
 `<C-]>`:&nbsp;&nbsp;&nbsp; jump to declaration or to definition<br>
