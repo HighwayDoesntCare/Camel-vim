@@ -3,18 +3,17 @@ syn match    cCustomFunc     "\w\+\s*(\@=" contains=cCustomParen
 syn match    cCustomScope    "::"
 syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
 
-hi CustomFunc guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightyellow ctermbg=NONE cterm=bold           
+hi CustomFunc guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightyellow ctermbg=NONE cterm=bold
 
 hi def link cCustomFunc CustomFunc
 hi def link cCustomClass CustomFunc
 
 
-
-hi CustomClassName guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightyellow ctermbg=NONE cterm=bold           
-syn match cCustomClassName "(?<=^class\s)\w\+"
+hi CustomClassName guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightyellow ctermbg=NONE cterm=bold
+syn match cCustomClassName "(?<=class\s)\w+"
 hi def link cCustomClassName CustomClassName
 
-
+hi CustomSTLType guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightblue ctermbg=NONE cterm=bold
 
 
 " Vim syntax file
@@ -1310,10 +1309,13 @@ if version >= 508 || !exists("did_cpp_syntax_inits")
   HiLink cppSTLfunctional   Typedef
   HiLink cppSTLconstant     Constant
   HiLink cppSTLnamespace    Constant
-  HiLink cppSTLtype         Typedef
+  "HiLink cppSTLtype         Typedef
+  HiLink cppSTLtype         CustomSTLType
   HiLink cppSTLexception    Exception
-  HiLink cppSTLiterator     Typedef
-  HiLink cppSTLiterator_tag Typedef
+  "HiLink cppSTLiterator     Typedef
+  HiLink cppSTLiterator     CustomSTLType
+  "HiLink cppSTLiterator_tag Typedef
+  HiLink cppSTLiterator_tag CustomSTLType
   HiLink cppSTLenum         Typedef
   HiLink cppSTLios          Function
   HiLink cppSTLcast         Statement " be consistent with official syntax
