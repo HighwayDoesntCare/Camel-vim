@@ -51,6 +51,7 @@ cp ./ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 cp ./clang-format.conf ~/.vim/
 cp ./*.vim ~/.vim/
 cp -r ./templates ~/.vim/
+cp -r ./syntax ~/.vim/
 
 sed -i '/CStyle=1/c\' ~/.bashrc
 #sed -i '/python=1/c\' ~/.bashrc
