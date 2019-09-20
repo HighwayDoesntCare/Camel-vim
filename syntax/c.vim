@@ -2,16 +2,15 @@ syn match    cCustomParen    "?=(" contains=cParen,cCppParen
 syn match    cCustomFunc     "\w\+\s*(\@=" contains=cCustomParen
 syn match    cCustomScope    "::"
 syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
-
 hi CustomFunc guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightyellow ctermbg=NONE cterm=bold
-
 hi def link cCustomFunc CustomFunc
-hi def link cCustomClass CustomFunc
 
-
-hi CustomClassName guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightyellow ctermbg=NONE cterm=bold
-syn match cCustomClassName "(?<=class\s)\w+"
+hi CustomClassName guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightgreen ctermbg=NONE cterm=bold
+syn match cCustomClassName "\(^class\s*\)\@<=\w\+"
+syn match cCustomStructName "\(^struct\s*\)\@<=\w\+"
 hi def link cCustomClassName CustomClassName
+hi def link cCustomStructName CustomClassName
+hi def link cCustomClass CustomClassName
 
 hi CustomSTLType guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightblue ctermbg=NONE cterm=bold
 
