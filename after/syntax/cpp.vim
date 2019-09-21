@@ -1,18 +1,18 @@
-syn match    cCustomParen    "?=(" contains=cParen,cCppParen
-syn match    cCustomFunc     "\w\+\s*(\@=" contains=cCustomParen
-syn match    cCustomScope    "::"
-syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
-hi CustomFunc guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightyellow ctermbg=NONE cterm=bold
-hi def link cCustomFunc CustomFunc
+syn match    cppCustomParen    "?=(" contains=cParen,cCppParen
+syn match    cppCustomFunc     "\w\+\s*(\@=" contains=cCustomParen
+syn match    cppCustomScope    "::"
+syn match    cppCustomClass    "\w\+\s*::" contains=cCustomScope
+hi hiCppCustomFunc guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightyellow ctermbg=NONE cterm=bold
+hi def link cppCustomFunc hiCppCustomFunc
 
-hi CustomClassName guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightgreen ctermbg=NONE cterm=bold
-syn match cCustomClassName "\(^class\s*\)\@<=\w\+"
-syn match cCustomStructName "\(^struct\s*\)\@<=\w\+"
-hi def link cCustomClassName CustomClassName
-hi def link cCustomStructName CustomClassName
-hi def link cCustomClass CustomClassName
+hi hiCppCustomClassName guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightgreen ctermbg=NONE cterm=bold
+syn match cppCustomClassName "\(^class\s*\)\@<=\w\+"
+syn match cppCustomStructName "\(^struct\s*\)\@<=\w\+"
+hi def link cppCustomClassName hiCppCustomClassName
+hi def link cppCustomStructName hiCppCustomClassName
+hi def link cppCustomClass hiCppCustomClassName
 
-hi CustomSTLType guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightblue ctermbg=NONE cterm=bold
+hi hiCppCustomSTLType guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=lightblue ctermbg=NONE cterm=bold
 
 
 " Vim syntax file
@@ -1304,17 +1304,17 @@ if version >= 508 || !exists("did_cpp_syntax_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 "  HiLink cppSTLfunction     Function
-  HiLink cppSTLfunction     CustomFunc
+  HiLink cppSTLfunction     hiCppCustomFunc
   HiLink cppSTLfunctional   Typedef
   HiLink cppSTLconstant     Constant
   HiLink cppSTLnamespace    Constant
   "HiLink cppSTLtype         Typedef
-  HiLink cppSTLtype         CustomSTLType
+  HiLink cppSTLtype         hiCppCustomSTLType
   HiLink cppSTLexception    Exception
   "HiLink cppSTLiterator     Typedef
-  HiLink cppSTLiterator     CustomSTLType
+  HiLink cppSTLiterator     hiCppCustomSTLType
   "HiLink cppSTLiterator_tag Typedef
-  HiLink cppSTLiterator_tag CustomSTLType
+  HiLink cppSTLiterator_tag hiCppCustomSTLType
   HiLink cppSTLenum         Typedef
   HiLink cppSTLios          Function
   HiLink cppSTLcast         Statement " be consistent with official syntax
