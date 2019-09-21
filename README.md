@@ -83,7 +83,7 @@ c) On Mac OS, you need to install `ctags` with `brew` with the command: `brew in
 
 
 ### About syntax highlight ###
-Custom names aren't recommended to use the used words in C++ Standard Library and in STL. So words like `count` in `int count;` would be highlighted as it is the function name coming from STL. If you want to get a custom name like `count` without highlight, you need to replace the line `systax keyword cppSTLfunction count` into `syntax match cppSTLfunction "\(\.|-\>\)\@<=count"`.
+Custom names aren't recommended to use the used words in C++ Standard Library and in STL. So words like `count` in `int count;` would be highlighted as it is the function name coming from STL. If you want to get a custom name like `count` without highlight, you need to replace the line `systax keyword cppSTLfunction count` into `syntax match cppSTLfunction "\(\.|-\>\)\@<=count"` in the files `cpp.vim` and `c.vim` in `~/.vim/after/syntax/`.
 
 
 ### References ###
