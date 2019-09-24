@@ -68,7 +68,7 @@ syntax on
 set background=dark
 colorscheme codedark
 set t_Co=256
-set smc=1000  " to limit the regular expression of syntax color to avoid huge calculation
+set smc=600  " to limit the regular expression of syntax color to avoid huge calculation
 
 hi! Normal ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=blue ctermbg=black
