@@ -74,7 +74,8 @@ To get more information about usage, click on the links at the References below.
 
 
 ### About syntax highlight ###
-Custom names aren't recommended to use the used words in C++ Standard Library and in STL. So words like `count` from `int count;` would be highlighted as it is the function name coming from STL. If you want to get a custom name like `count` without highlight, you need to replace the line `systax keyword cppSTLfunction count` into `syntax match cppSTLfunction "\(\.|-\>\)\@<=count"` in the file `cpp.vim` in `~/.vim/after/syntax/`.
+Custom names aren't recommended to use the used words in C++ Standard Library and in STL. So words like `count` from `int count;` would be highlighted as it is the function name coming from STL. If you want to get a custom name like `count` without highlight, you need to replace the line `systax keyword cppSTLfunction count` into `syntax match cppSTLfunction "\(\.|-\>\)\@<=count"` in the file `cpp.vim` in `~/.vim/after/syntax/`.<br>
+The syntax highlight works based on the regular experssion. So long codes in one line may cause delay. To avoid this, the syntax highlight works on the lines with the length smaller than 600, the part of over 600 won't be highlighted.
 
 
 ### Some bugs ###
