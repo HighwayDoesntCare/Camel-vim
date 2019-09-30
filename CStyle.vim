@@ -4,6 +4,8 @@ command Q qa
 "cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
 
+set colorcolumn=120
+hi ColorColumn ctermbg=0 guibg=lightgrey
 set updatetime=4500
 set completeopt=menu,preview,longest
 set completeopt-=preview
