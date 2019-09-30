@@ -25,7 +25,7 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 
 `\tg`: open or close the window of taglist<br>
 
-`<F6>`: format the current file<br>
+`<F6>`: format the current file with K&R style<br>
 
 `mh`: move cursor to left window<br>
 `mj`: move cursor to bottom window<br>
@@ -40,7 +40,7 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `<C-k>`: switch current line with previous line<br>
 
 `\cc`: comment one line<br>
-`\cv`: comment one line with next delimiter.<br>
+`\cv`: comment one line with next delimiter<br>
 `\cm`: comment multi lines<br>
 `\c$`: comment to end of line<br>
 `\cu`: uncomment<br>
@@ -48,20 +48,16 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `<C-p>`: search file in project<br>
 
 `:Grep [keyword]`: search the keyword in project<br>
-
 `\vv`: search the word under cursor in project<br>
 `\vr`: replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br> 
 `cgt`: save changes and close all tabs except the first, then close the bottom-right window<br>
-
 `:ccl<CR>`: close `Grep` window<br>
 
-`<F12>`:&nbsp;&nbsp;&nbsp; jump to header file<br>
-`<C-]>`:&nbsp;&nbsp;&nbsp; jump to declaration or to definition<br>
-`g<C-]>`:&nbsp; jump to the only match or list multi matches<br>
-`<C-o>`:&nbsp;&nbsp; go backword<br>
-`<C-i>`:&nbsp;&nbsp; go forward<br>
-
-
+`<F12>`: jump to header file<br>
+`<C-]>`: jump to declaration or to definition<br>
+`g<C-]>`: jump to the only match or list multi matches<br>
+`<C-o>`: go backword<br>
+`<C-i>`: go forward<br>
 
 To get more information about usage, click on the links at the References below.
 
@@ -77,7 +73,7 @@ To get more information about usage, click on the links at the References below.
 
 
 ### About syntax highlight ###
-Custom names aren't recommended to use the used words in C++ Standard Library and in STL. So words like `count` in `int count;` would be highlighted as it is the function name coming from STL. If you want to get a custom name like `count` without highlight, you need to replace the line `systax keyword cppSTLfunction count` into `syntax match cppSTLfunction "\(\.|-\>\)\@<=count"` in the files `cpp.vim` and `c.vim` in `~/.vim/after/syntax/`.
+Custom names aren't recommended to use the used words in C++ Standard Library and in STL. So words like `count` from `int count;` would be highlighted as it is the function name coming from STL. If you want to get a custom name like `count` without highlight, you need to replace the line `systax keyword cppSTLfunction count` into `syntax match cppSTLfunction "\(\.|-\>\)\@<=count"` in the file `cpp.vim` in `~/.vim/after/syntax/`.
 
 
 ### Some bugs ###
