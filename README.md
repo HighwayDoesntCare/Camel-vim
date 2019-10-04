@@ -11,7 +11,9 @@ It allows you to format codes with K&R style.
 
 
 ### Installation ###
-Execute `./install.sh`.<br>
+Execute `./check.sh` to check if the environment is suitable for the installation.<br>
+Execute `./install.sh` to do the installation.
+
 
 ##### Issues #####
 a) Downloading clang may fail while installing YCM. In this case, you need to download clang (`libclang-7.0.0-x86_64-unknown-linux-gnu.tar.bz2` for x86_64) manually from https://dl.bintray.com/micbou/libclang/ and put it into `~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives/`.<br>
