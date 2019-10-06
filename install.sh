@@ -43,12 +43,7 @@ echo "alias vimc=\"vim --cmd 'let CStyle=1'\"" >> ~/.bashrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 cd ~/.vim/bundle && git clone https://github.com/Valloric/YouCompleteMe.git
-cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
-rm -rf ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/cregex
-cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x/ && git clone https://github.com/golang/tools.git
-cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
-
-~/.vim/bundle/YouCompleteMe/install.py --all
+./install_YCM.sh
 
 vim -E -c PluginInstall -c q -c q
 
