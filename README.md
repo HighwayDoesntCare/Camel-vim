@@ -85,10 +85,10 @@ The syntax highlight works based on the regular experssion. So long codes in one
 
 
 ### References ###
-https://github.com/VundleVim/Vundle.vim (vim plugin manager)<br>
+https://github.com/VundleVim/Vundle.vim<br>
 https://github.com/Valloric/YouCompleteMe<br>
 https://github.com/rdnetto/YCM-Generator<br>
-https://github.com/tpope/vim-pathogen (start YCM automatically while executing vim)<br>
+https://github.com/tpope/vim-pathogen<br>
 https://github.com/scrooloose/nerdtree<br>
 https://github.com/vim-syntastic/syntastic<br>
 https://github.com/dkprice/vim-easygrep<br>
