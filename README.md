@@ -39,7 +39,7 @@ Why "at the root of project"? To ensure that searching, jumping and formatting i
 `mw`: move cursor to window below/right of the current one<br>
 `mt`: move cursor to top-left window<br>
 `mb`: move cursor to bottom-right window<br>
-`mp`: move cursor to previsou window<br>
+`mp`: move cursor to previous window<br>
 
 `<C-j>`: switch current line with next line<br>
 `<C-k>`: switch current line with previous line<br>
