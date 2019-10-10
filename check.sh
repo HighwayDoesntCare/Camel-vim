@@ -30,5 +30,6 @@ if [[ ${found} == 0 ]]; then
 fi
 if [[ ${found} != 0 || ${res} < 5 ]]; then
     echo "clang-format with the minimum version 5.0 is necessary to format code. Otherwise, the formatter can not work."
+    echo "You can install the proper clang-format after the installation."
     #read -n 1 -s -r -p "Press any key to continue...";
 fi
