@@ -1,4 +1,4 @@
-command Q qa
+command Q w|qa
 "command Q call delete('.tags')|call delete('.clang-format')|qa
 "command Qone q|TlistClose
 "cnoreabbrev q Qone
