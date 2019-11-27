@@ -18,6 +18,7 @@ let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 
 autocmd VimEnter * NERDTree
 execute pathogen#infect()
+let g:NERDTreeWinSize=24
 
 
 autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format'
