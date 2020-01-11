@@ -136,6 +136,8 @@ let g:formatters_cpp = ['my_custom_cpp']
 nnoremap cgt :wa<CR> \| :2,$tabdo :tabc<CR> \| <C-w><C-j> :q<CR>
 nmap <leader>cv <leader>ca<leader>cc<leader>ca
 
+nnoremap <F5> :wa<CR> \| :sh<CR>
+
 nnoremap <F6> :Autoformat<CR>
 
 nnoremap <leader>tg :TlistToggle<CR>
