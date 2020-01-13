@@ -4,7 +4,7 @@ Pomme-c-vim
 
 ### Introduction ###
 
-![alt text](https://github.com/YvesZHI/Pomme-c-vim/blob/master/sample.JPG)
+![alt text](https://github.com/YvesZHI/Pomme-c-vim/blob/master/sample.PNG)
 
 Pomme-c-vim can build a vim-plugin-based environment for c/c++. It will install and configure the YouCompleteMe and some other plugins.<br>
 It allows you to search and replace words, comment and uncomment codes.<br>
