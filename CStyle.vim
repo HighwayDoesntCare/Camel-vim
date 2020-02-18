@@ -33,6 +33,8 @@ else
 endif
 autocmd CursorHold,CursorHoldI * update
 
+autocmd FileType c,cpp setlocal equalprg=clang-format
+
 augroup templates
     autocmd!
     autocmd BufRead *.h,*.hpp,*.c,*.cpp call s:ApplyTemplate()
@@ -130,15 +132,13 @@ let g:indentLine_color_term = 60
 
 let skeletons#autoRegister = 1
 
-let g:formatdef_my_custom_cpp = '"clang-format -i ".@%'
-let g:formatters_cpp = ['my_custom_cpp']
+"let g:formatdef_my_custom_cpp = '"clang-format -i ".@%'
+"let g:formatters_cpp = ['my_custom_cpp']
 
 nnoremap cgt :wa<CR> \| :2,$tabdo :tabc<CR> \| <C-w><C-j> :q<CR>
 nmap <leader>cv <leader>ca<leader>cc<leader>ca
 
 nnoremap <F5> :wa<CR> \| :sh<CR>
-
-nnoremap <F6> :Autoformat<CR>
 
 nnoremap <leader>tg :TlistToggle<CR>
 
