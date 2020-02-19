@@ -23,4 +23,4 @@ VimC()
     vim --cmd 'let CStyle=1'
 }
 
-alias vimc="VimC"
+alias vimc="VimC 100000" # 100MB
