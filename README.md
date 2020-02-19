@@ -35,7 +35,7 @@ Why "at the root of project"? To ensure that searching, jumping and formatting i
 `\tg`: open or close the window of taglist<br>
 
 `<F5>`: go to shell, equivalent to `:sh<CR>`<br>
-`<F6>`: format the current file with K&R style<br>
+`gg=G`: format the current file with K&R style with the tool clang-format<br>
 
 `mh`: move cursor to left window<br>
 `mj`: move cursor to bottom window<br>
