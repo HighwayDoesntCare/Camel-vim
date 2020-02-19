@@ -5,7 +5,7 @@ VimC()
     if [[ $res -gt $1 ]]; then
         while true; do
             res=`bc <<< "scale=2; $res/$1"`
-            read -r -p "The size of the current directory equals to $res MB. Continue? [Y/n] " input
+            read -r -p "The current directory size: $res MB. Continue? [Y/n] " input
             case $input in
                 [yY][eE][sS]|[yY])
                     break
