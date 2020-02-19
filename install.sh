@@ -38,7 +38,7 @@ cp ./*.vim ~/.vim/
 cp -r ./templates ~/.vim/
 cp -r ./after ~/.vim/
 
-grep -q vimc ~/.bashrc || cat content >> ~/.bashrc
+grep -q vimc ~/.bashrc || cat vimc >> ~/.bashrc
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
