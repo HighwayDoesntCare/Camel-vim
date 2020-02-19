@@ -4,7 +4,7 @@ VimC()
     res=`du -s $absPath | awk '{print $1}'`
     if [[ $res -gt $1 ]]; then
         while true; do
-            res=`bc <<< "scale=2; $res/$1"`
+            res=`bc <<< "scale=2; $res/1024"` # convert KB to MB
             read -r -p "The current directory size: $res MB. Continue? [Y/n] " input
             case $input in
                 [yY][eE][sS]|[yY])
@@ -23,4 +23,4 @@ VimC()
     vim --cmd 'let CStyle=1'
 }
 
-alias vimc="VimC 100000" # 100M
+alias vimc="VimC"
