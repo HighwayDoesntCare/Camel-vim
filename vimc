@@ -1,0 +1,26 @@
+VimC()
+{
+    absPath=$( cd \"$(dirname \"$0\")\" >/dev/null 2>&1 ; pwd -P )
+    res=`du -s $absPath | awk '{print $1}'`
+    if [[ $res -gt $1 ]]; then
+        while true; do
+            res=`bc <<< "scale=2; $res/$1"`
+            read -r -p "The size of the current directory equals to $res MB. Continue? [Y/n] " input
+            case $input in
+                [yY][eE][sS]|[yY])
+                    break
+                    ;;
+                [nN][oO]|[nN])
+                    echo 'Abort.'
+                    return 1
+                    ;;
+                *)
+                    echo "Invalid input..."
+                    ;;
+            esac
+        done
+    fi
+    vim --cmd 'let CStyle=1'
+}
+
+alias vimc="VimC 100000" # 100M
