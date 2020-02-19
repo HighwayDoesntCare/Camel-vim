@@ -38,11 +38,7 @@ cp ./*.vim ~/.vim/
 cp -r ./templates ~/.vim/
 cp -r ./after ~/.vim/
 
-sed -i '/CStyle=1/c\' ~/.bashrc
-#sed -i '/python=1/c\' ~/.bashrc
-echo "alias vimc=\"vim --cmd 'let CStyle=1'\"" >> ~/.bashrc
-#echo "alias vimpy=\"vim --cmd 'let python=1'\"" >> ~/.bashrc
-
+grep -q vimc ~/.bashrc || cat content >> ~/.bashrc
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
