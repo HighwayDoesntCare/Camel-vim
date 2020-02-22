@@ -89,8 +89,3 @@ let g:indentLine_enabled = 0
 if exists('CStyle')
 	source ~/.vim/CStyle.vim
 endif
-
-"if exists('python')
-"	source ~/.vim/python.vim
-"endif
-
