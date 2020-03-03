@@ -19,8 +19,8 @@ Plugin 'taglist.vim'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'Yggdroot/indentLine'
-Plugin 'tomasiser/vim-code-dark'
-Plugin 'octol/vim-cpp-enhanced-highlight'
+"Plugin 'tomasiser/vim-code-dark'
+"Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()
 
