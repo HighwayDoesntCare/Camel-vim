@@ -104,3 +104,4 @@ https://github.com/rstacruz/sparkup<br>
 https://github.com/tpope/vim-fugitive<br>
 https://github.com/Yggdroot/indentLine<br>
 https://github.com/tomasiser/vim-code-dark<br>
+https://github.com/octol/vim-cpp-enhanced-highlight<br>
