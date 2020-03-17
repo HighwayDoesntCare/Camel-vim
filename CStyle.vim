@@ -57,7 +57,7 @@ augroup templates
 augroup END
 
 
-let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|.hpp\|\.cpp\|makefile\|Makefile\|CMakeLists.txt\|\.html\)\@<!$[[file]]', 'bin']
+let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|\.hpp\|\.cpp\|makefile\|Makefile\|CMakeLists.txt\|\.html\)\@<!$[[file]]', 'bin']
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowLineNumbers=1
 
