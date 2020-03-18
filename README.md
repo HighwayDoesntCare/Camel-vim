@@ -14,7 +14,7 @@ It allows you to format codes with K&R style.
 
 
 ### Installation ###
-Camel-vim supports vim 7 and vim 8. You can get one of them with the help of `git tag`.<br>
+Camel-vim supports vim 7 and vim 8. You can get one of them by switching the branches.<br>
 Then, execute `./check.sh` to check if the environment is suitable for the installation and execute `./install.sh` to do the installation.
 
 
