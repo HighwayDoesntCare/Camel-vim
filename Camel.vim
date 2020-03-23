@@ -98,14 +98,16 @@ let g:ycm_server_log_level='debug'
 set statusline+=%#warningmsg#
 function! LinterStatus() abort
     let l:counts = ale#statusline#Count(bufnr(''))
+    let l:fst = ale#statusline#FirstProblem(bufnr(''), 'error')
 
     let l:all_errors = l:counts.error + l:counts.style_error
     let l:all_non_errors = l:counts.total - l:all_errors
 
     return l:counts.total == 0 ? 'OK' : printf(
-    \   '%dW %dE',
+    \   '%dW %dE(%d)',
     \   all_non_errors,
-    \   all_errors
+    \   all_errors,
+    \   fst.lnum
     \)
 endfunction
 set statusline+=%{LinterStatus()}
