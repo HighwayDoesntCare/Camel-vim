@@ -122,10 +122,6 @@ let g:NERDCustomDelimiters = {
 \   'cpp': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
 \}
 
-let g:ConqueTerm_Color=2
-let g:ConqueTerm_CloseOnEnd=1
-let g:ConqueTerm_StartMessages=0
-
 let g:indentLine_enabled = 1
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 60
