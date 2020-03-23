@@ -12,6 +12,7 @@ set completeopt=menu,preview,longest
 set completeopt-=preview
 set conceallevel=2
 set concealcursor=vin
+set splitbelow
 
 let g:clang_c_options='-std=gun11'
 let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
@@ -95,20 +96,25 @@ let g:ycm_server_keep_logfiles=1
 let g:ycm_server_log_level='debug'
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+function! LinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+
+    return l:counts.total == 0 ? 'OK' : printf(
+    \   '%dW %dE',
+    \   all_non_errors,
+    \   all_errors
+    \)
+endfunction
+set statusline+=%{LinterStatus()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=0
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_enable_signs=1
-let g:syntastic_cpp_check_header=0
-let g:syntastic_cpp_remove_include_errors=1
-let g:syntastic_cpp_checkers = ['gcc']
-let g:syntastic_cpp_compiler = 'gcc'
-"let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
-let g:syntastic_cpp_compiler_options = '-std=c++11'
-let g:syntastic_quiet_messages = {'regex': 'No such file or directory'}
+let g:ale_set_highlights = 0
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_completion_enabled = 0
 
 let g:NERDSpaceDelims=1
 let g:NERDCompactSexyComs=1
