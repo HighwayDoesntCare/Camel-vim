@@ -20,7 +20,7 @@ VimC()
             esac
         done
     fi
-    vim --cmd 'let CStyle=1'
+    vim --cmd 'let Camel=1'
 }
 
 alias vimc="VimC 100000" # 100MB

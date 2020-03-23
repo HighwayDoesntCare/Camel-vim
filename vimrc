@@ -85,6 +85,6 @@ nnoremap <C-v><C-a> gg<C-v>G$
 
 let g:indentLine_enabled = 0
 
-if exists('CStyle')
-	source ~/.vim/CStyle.vim
+if exists('Camel')
+	source ~/.vim/Camel.vim
 endif
