@@ -48,6 +48,7 @@ set softtabstop=4
 set matchtime=2
 set formatoptions-=cro
 set statusline=%<%f\ %h%m%r\ %y%=%{v:register}\ %-14.(%l,%c%V%)\ %P
+set backspace=indent,eol,start
 
 set hlsearch
 
