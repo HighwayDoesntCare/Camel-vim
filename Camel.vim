@@ -151,7 +151,7 @@ let g:cpp_concepts_highlight = 1
 nnoremap cgt :wa<CR> \| :2,$tabdo :tabc<CR> \| <C-w><C-j> :q<CR>
 nmap <leader>cv <leader>ca<leader>cc<leader>ca
 
-nnoremap <F5> :wa<CR> \| :sh<CR>
+nnoremap <F5> :wa<CR> \| :term<CR>
 
 nnoremap <leader>tg :TlistToggle<CR>
 
