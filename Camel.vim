@@ -113,6 +113,9 @@ function! LinterStatus() abort
 endfunction
 set statusline+=%{LinterStatus()}
 set statusline+=%*
+let g:c_clangformat_executable = 'null'
+let g:ale_cpp_gcc_executable = 'g++'
+let g:ale_cpp_gcc_options = '-std=c++11'
 let g:ale_set_highlights = 0
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
