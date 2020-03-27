@@ -92,7 +92,6 @@ The syntax highlight works based on the regular experssion. So long codes in one
 https://github.com/VundleVim/Vundle.vim<br>
 https://github.com/Valloric/YouCompleteMe<br>
 https://github.com/rdnetto/YCM-Generator<br>
-https://github.com/tpope/vim-pathogen<br>
 https://github.com/scrooloose/nerdtree<br>
 https://github.com/dense-analysis/ale<br>
 https://github.com/dkprice/vim-easygrep<br>

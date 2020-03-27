@@ -14,11 +14,12 @@ set conceallevel=2
 set concealcursor=vin
 set splitbelow
 
+set rtp+=~/.vim/bundle/YouCompleteMe "YCM is installed with some error, so Vundle can't distinguish it automatically.
+
 let g:clang_c_options='-std=gun11'
 let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 
 autocmd VimEnter * NERDTree
-execute pathogen#infect()
 let g:NERDTreeWinSize=24
 
 
