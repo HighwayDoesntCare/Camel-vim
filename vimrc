@@ -9,7 +9,6 @@ Plugin 'VundleVim/Vundle.vim'
 " options
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'tpope/vim-pathogen'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'dkprice/vim-easygrep'
