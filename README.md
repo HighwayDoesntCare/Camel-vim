@@ -15,7 +15,8 @@ It allows you to format codes with K&R style.
 
 ### Installation ###
 Camel-vim supports vim 7 and vim 8. The branch master is for vim 7 and the branch vim8 is for vim 8.<br>
-Then, execute `./check.sh` to check if the environment is suitable for the installation and execute `./install.sh` to do the installation.
+Execute `./check.sh` to check if the environment is suitable for the installation.<br>
+Execute `./install.sh` to do the installation.
 
 
 ##### Issues #####
