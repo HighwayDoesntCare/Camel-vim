@@ -8,6 +8,7 @@ hash cmake 2>/dev/null || { echo >&2 "cmake is not installed.  Aborting."; exit 
 hash make 2>/dev/null || { echo >&2 "make is not installed.  Aborting."; exit 1; }
 hash python 2>/dev/null || { echo >&2 "python is not installed.  Aborting."; exit 1; }
 hash python-config 2>/dev/null || { echo >&2 "python-dev is not installed.  Aborting."; exit 1; } # use python-config to check if python-dev is installed or not
+hash python3.6-config 2>/dev/null || { echo >&2 "python3.6-dev is not installed.  Aborting."; exit 1; } # use python3.6-config to check if python3.6-dev is installed or not
 hash git 2>/dev/null || { echo >&2 "git is not installed.  Aborting."; exit 1; }
 hash vim 2>/dev/null || { echo >&2 "vim is not installed.  Aborting."; exit 1; }
 hash autoreconf 2>/dev/null || { echo >&2 "automake is not installed.  Aborting."; exit 1; }
