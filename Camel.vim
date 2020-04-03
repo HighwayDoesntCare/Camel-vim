@@ -79,11 +79,9 @@ let g:ycm_semantic_triggers = {
 let g:Tlist_Use_Right_Window=1
 let g:Tlist_Auto_Open=1
 
-let g:EasyGrepRecursive=1
-let g:EasyGrepHidden=1
-let g:EasyGrepIgnoreCase=1
-let g:EasyGrepMode=2
-let g:EasyGrepFileAssociations=$HOME."/.vim/bundle/vim-easygrep/plugin/EasyGrepFileAssociations"
+"let g:ycm_show_diagnostics_ui = 0
+"let g:ycm_enable_diagnostic_signs = 0
+"let g:ycm_enable_diagnostic_highlighting = 0
 
 let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
@@ -91,7 +89,7 @@ let g:ycm_show_diagnostics_ui = 0
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_min_num_of_chars_for_completion=1
 let g:ycm_cache_omnifunc=0
-let g:ycm_seed_identifiers_with_syntax=1
+"let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_global_ycm_extra_conf=$HOME."/.vim/.ycm_extra_conf.py"
 let g:ycm_server_keep_logfiles=1
 let g:ycm_server_log_level='debug'
@@ -185,3 +183,52 @@ function! Jump(type)
 endfunction
 nnoremap <C-]> :call Jump('single')<CR>
 nnoremap g<C-]> :call Jump('multi')<CR>
+
+""" Custom Search & Replace
+function! CustomGrepCore(target)
+    silent! execute 'vimgrep '.a:target.' **/*.h **/*.hpp **/*.c **/*.cpp'
+    return len(getqflist())
+endfunction
+
+function! CustomGrep(...)
+    let before = expand('%:p')
+    if a:0 == 0
+        let res = CustomGrepCore("<cword>")
+    else
+        let res = CustomGrepCore(a:1)
+    endif
+    if res != 0
+        cope
+        execute "normal \<C-w>\<C-k>"
+        if before != expand('%:p')
+            execute "normal \<C-o>"
+        endif
+    endif
+endfunction
+
+function! CustomReplace(...)
+    if a:0 == 1
+        let target = expand("<cword>")
+        let newWord = a:1
+    elseif a:0 == 2
+        let target = a:1
+        let newWord = a:2
+    else
+        return
+    endif
+
+    let cnt = CustomGrepCore(target)
+    let x = 0
+    while x < cnt
+        execute 's/'.target.'/'.newWord.'/gc'
+        w
+        if x != cnt - 1
+            cnext
+        endif
+        let x = x + 1
+    endwhile
+endfunction
+
+command! -nargs=? Grep :call CustomGrep(<f-args>)
+command! -nargs=+ Replace :call CustomReplace(<f-args>)
+nnoremap <leader>vv :Grep<CR>
