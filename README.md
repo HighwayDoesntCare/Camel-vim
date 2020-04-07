@@ -58,9 +58,11 @@ Why "at the root of project"? To ensure that searching, jumping and formatting i
 
 `<C-p>`: search file in project<br>
 
-`:Grep [keyword]`: search the keyword in project<br>
+`:Grep [keyword]<CR>`: search the keyword in project<br>
 `\vv`: search the word under cursor in project<br>
-`\vr`: replace the word under cursor in project (`:ReplaceUndo` to undo the replace)<br> 
+`:Replace [keyword]<CR>`: replace the word under cursor with `keyword` in project<br>
+`:Replace [target] [keyword]<CR>`: replace the word `target` with `keyword` in project<br>
+`:UndoReplace<CR>`: undo `:Replace`<br>
 `cgt`: save changes and close all tabs except the first, then close the bottom-right window<br>
 `:ccl<CR>`: close `Grep` window<br>
 
@@ -96,7 +98,6 @@ https://github.com/Valloric/YouCompleteMe<br>
 https://github.com/rdnetto/YCM-Generator<br>
 https://github.com/scrooloose/nerdtree<br>
 https://github.com/vim-syntastic/syntastic<br>
-https://github.com/dkprice/vim-easygrep<br>
 https://github.com/ctrlpvim/ctrlp.vim<br>
 https://github.com/scrooloose/nerdcommenter<br>
 https://github.com/vim-scripts/taglist.vim<br>
