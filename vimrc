@@ -46,7 +46,7 @@ set backspace=indent,eol,start
 
 set hlsearch
 
-set ignorecase
+set noignorecase
 
 set mouse=a
 
