@@ -252,5 +252,5 @@ endfunction
 
 command! -nargs=? Grep :call CustomGrep(<f-args>)
 command! -nargs=+ Replace :call CustomReplace(<f-args>)
-command! UndoReplace :call CustomUndoReplace()
+command! UndoReplace :silent! call CustomUndoReplace()
 nnoremap <leader>vv :Grep<CR>
