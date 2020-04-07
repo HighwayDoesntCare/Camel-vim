@@ -31,10 +31,11 @@ done
 rm -rf ~/.vim ~/.vimrc
 mkdir ~/.vim 2>/dev/null
 
-cp ./vimrc ~/.vimrc
 cp ./ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 cp ./clang-format.conf ~/.vim/
 cp ./*.vim ~/.vim/
+cp ./vimrc ~/.vim/vimrc
+echo 'source ~/.vim/vimrc' > ~/.vimrc
 cp -r ./templates ~/.vim/
 
 grep -q vimc ~/.bashrc || cat vimc >> ~/.bashrc
