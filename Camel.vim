@@ -79,13 +79,11 @@ let g:ycm_semantic_triggers = {
 let g:Tlist_Use_Right_Window=1
 let g:Tlist_Auto_Open=1
 
-"let g:ycm_show_diagnostics_ui = 0
-"let g:ycm_enable_diagnostic_signs = 0
-"let g:ycm_enable_diagnostic_highlighting = 0
-
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
-let g:ycm_show_diagnostics_ui = 0
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_min_num_of_chars_for_completion=1
 let g:ycm_cache_omnifunc=0
@@ -110,6 +108,7 @@ function! LinterStatus() abort
 endfunction
 set statusline+=%{LinterStatus()}
 set statusline+=%*
+let g:ale_linters = {'c': ['gcc'], 'cpp': ['gcc']}
 let g:c_clangformat_executable = 'null'
 let g:ale_cpp_gcc_executable = 'g++'
 let g:ale_cpp_gcc_options = '-std=c++11'
