@@ -58,10 +58,11 @@ Why "at the root of project"? To ensure that searching, jumping and formatting i
 
 `<C-p>`: search file in project<br>
 
-`:Grep [keyword]`: search the keyword in project<br>
+`:Grep [keyword]<CR>`: search the keyword in project<br>
 `\vv`: search the word under cursor in project<br>
-`:Replace [keyword]`: replace the word under cursor in project<br>
-`:Replace [target] [keyword]`: replace the word `target` with `keyword` in project<br> 
+`:Replace [keyword]<CR>`: replace the word under cursor with `keyword` in project<br>
+`:Replace [target] [keyword]<CR>`: replace the word `target` with `keyword` in project<br>
+`:UndoReplace<CR>`: undo `:Replace`<br>
 `cgt`: save changes and close all tabs except the first, then close the bottom-right window<br>
 `:ccl<CR>`: close `Grep` window<br>
 
