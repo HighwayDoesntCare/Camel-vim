@@ -184,7 +184,6 @@ endfunction
 nnoremap <C-]> :call Jump('single')<CR>
 nnoremap g<C-]> :call Jump('multi')<CR>
 
-""" Custom Search & Replace
 function! CustomGrepCore(target)
     silent! execute 'vimgrep '.a:target.' **/*.h **/*.hpp **/*.c **/*.cpp'
     return len(getqflist())
@@ -216,9 +215,18 @@ function! CustomReplace(...)
     else
         return
     endif
+    let g:target = newWord
+    let g:lastWord = target
 
-    call CustomGrepCore(target)
+    let before = expand('%:p')
+    let res = CustomGrepCore(target)
+    if res != 0
+        if before != expand('%:p')
+            execute "normal \<C-o>"
+        endif
+    endif
     cdo execute 's/'.target.'/'.newWord.'/gc | w'
+
     "let cnt = CustomGrepCore(target)
     "let x = 0
     "while x < cnt
@@ -231,6 +239,18 @@ function! CustomReplace(...)
     "endwhile
 endfunction
 
+function! CustomUndoReplace()
+    let before = expand('%:p')
+    let res = CustomGrepCore(g:target)
+    if res != 0
+        cfdo execute '%s/'.g:target.'/'.g:lastWord.'/g | w'
+        if before != expand('%:p')
+            execute "normal \<C-o>"
+        endif
+    endif
+endfunction
+
 command! -nargs=? Grep :call CustomGrep(<f-args>)
 command! -nargs=+ Replace :call CustomReplace(<f-args>)
+command! UndoReplace :call CustomUndoReplace()
 nnoremap <leader>vv :Grep<CR>
