@@ -66,9 +66,9 @@ Why "at the root of project"? To ensure that searching, jumping and formatting i
 `cgt`: save changes and close all tabs except the first, then close the bottom-right window<br>
 `:ccl<CR>`: close `Grep` window<br>
 
-`<F12>`: jump to header file<br>
-`<C-]>`: jump to declaration or to definition<br>
-`g<C-]>`: jump to the only match or list multi matches<br>
+`<F12>`: goto header file<br>
+`<C-]>`: goto declaration or to definition<br>
+`g<C-]>`: goto the only match or list multi matches<br>
 `<C-o>`: go backword<br>
 `<C-i>`: go forward<br>
 
@@ -77,12 +77,13 @@ To get more information about usage, click on the links at the References below.
 
 ### Tips ###
 0) Edit the line 59 to 61 of `ycm_extra_conf.py` to change the searching path of YCM.<br>
-1) Edit the template files at `~/.vim/templates/` to customize the templates for `.h`, `.hpp`, `.c` and `.cpp`.<br>
-2) `<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.<br>
-3) For huge/distributed projects, use `<F12>` before `<C-]>` is recommended if possible.<br>
-4) If `tags file not ready` is printed while typing `<C-]>` or `g<C-]>`, it means that the file `.tags` hasn't been generated yet by `ctags`. It is probably because that the project is so huge that `ctags` needs some time to generate the `.tags`.<br>
-5) After typing `C-p` and selecting a file, type `F12` is recommanded to refresh the Nerdtree.<br>
-6) `<C-l>` may be necessary to refresh the whole vim interface after some operations, such as `<F6>`.
+1) Execute `:YcmGenerateConfig` to enable "goto declaration or definition" if `Makefile` or `CMakeLists.txt` is used.<br>
+2) Edit the template files at `~/.vim/templates/` to customize the templates for `.h`, `.hpp`, `.c` and `.cpp`.<br>
+3) `<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.<br>
+4) For huge/distributed projects, use `<F12>` before `<C-]>` is recommended if possible.<br>
+5) If `tags file not ready` is printed while typing `<C-]>` or `g<C-]>`, it means that the file `.tags` hasn't been generated yet by `ctags`. It is probably because that the project is so huge that `ctags` needs some time to generate the `.tags`.<br>
+6) After typing `C-p` and selecting a file, type `F12` is recommanded to refresh the Nerdtree.<br>
+7) `<C-l>` may be necessary to refresh the whole vim interface after some operations, such as `<F6>`.
 
 
 ### About syntax highlight ###
