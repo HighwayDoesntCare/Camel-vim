@@ -184,6 +184,7 @@ endfunction
 nnoremap <C-]> :call Jump('single')<CR>
 nnoremap g<C-]> :call Jump('multi')<CR>
 
+""" Custom Search & Replace
 function! CustomGrepCore(target)
     silent! execute 'vimgrep '.a:target.' **/*.h **/*.hpp **/*.c **/*.cpp'
     return len(getqflist())
