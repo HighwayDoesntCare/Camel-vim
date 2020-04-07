@@ -23,7 +23,7 @@ autocmd VimEnter * NERDTree
 let g:NERDTreeWinSize=24
 
 
-autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format'
+autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format .ycm_extra_conf.py'
 
 set tags=.tags
 if has('macunix')
