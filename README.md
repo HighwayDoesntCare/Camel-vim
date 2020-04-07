@@ -8,7 +8,7 @@ Camel-vim
 
 Camel-vim can build a vim-plugin-based environment for c/c++. It will install and configure YouCompleteMe and some other plugins.<br>
 It allows you to search and replace words, comment and uncomment codes.<br>
-It allows you to go to header file, to declaration and to definition recusively.<br>
+It allows you to jump to header file, to declaration and to definition recusively.<br>
 It allows you to create files with templates.<br>
 It allows you to format codes with K&R style.
 
