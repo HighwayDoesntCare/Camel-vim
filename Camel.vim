@@ -207,16 +207,18 @@ function! CustomReplace(...)
         return
     endif
 
-    let cnt = CustomGrepCore(target)
-    let x = 0
-    while x < cnt
-        execute 's/'.target.'/'.newWord.'/gc'
-        w
-        if x != cnt - 1
-            cnext
-        endif
-        let x = x + 1
-    endwhile
+    call CustomGrepCore(target)
+    cdo execute 's/'.target.'/'.newWord.'/gc | w'
+    "let cnt = CustomGrepCore(target)
+    "let x = 0
+    "while x < cnt
+    "    execute 's/'.target.'/'.newWord.'/gc'
+    "    w
+    "    if x != cnt - 1
+    "        cnext
+    "    endif
+    "    let x = x + 1
+    "endwhile
 endfunction
 
 command! -nargs=? Grep :call CustomGrep(<f-args>)
