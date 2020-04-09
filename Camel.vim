@@ -20,9 +20,7 @@ let g:clang_c_options='-std=gun11'
 let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 
 autocmd VimEnter * NERDTree
-let g:NERDTreeWinSize=24
-
-
+autocmd VimEnter * silent! !eval '~/.vim/bundle/YCM-Generator/config_gen.py . >/dev/null 2>&1 &'
 autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format .ycm_extra_conf.py'
 
 set tags=.tags
@@ -58,7 +56,7 @@ augroup templates
     endfun
 augroup END
 
-
+let g:NERDTreeWinSize=24
 let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|\.hpp\|\.cpp\|makefile\|Makefile\|CMakeLists.txt\|\.html\)\@<!$[[file]]', 'bin']
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowLineNumbers=1
