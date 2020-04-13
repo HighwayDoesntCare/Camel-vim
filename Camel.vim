@@ -25,18 +25,18 @@ autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format .ycm_extra_conf
 set tags=.tags
 if has('macunix')
     autocmd VimEnter * silent! !eval 'cp ~/.vim/clang-format.conf ./.clang-format; ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags'
-    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags'
+    au BufWritePost *.h,*.c,*.cpp,*.hpp,*.cc silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags'
 else
     autocmd VimEnter * silent! !eval 'cp ~/.vim/clang-format.conf ./.clang-format; ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
-    au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
+    au BufWritePost *.h,*.c,*.cpp,*.hpp,*.cc silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
 endif
 autocmd CursorHold,CursorHoldI * update
 
-autocmd FileType c,cpp setlocal equalprg=clang-format
+autocmd FileType c,cpp,cc setlocal equalprg=clang-format
 
 augroup templates
     autocmd!
-    autocmd BufRead *.h,*.hpp,*.c,*.cpp call s:ApplyTemplate()
+    autocmd BufRead *.h,*.hpp,*.c,*.cpp,*.cc call s:ApplyTemplate()
 
     function! s:ApplyTemplate()
         if getfsize(expand('%')) == 0
@@ -47,7 +47,7 @@ augroup templates
                 if expand('%:e') == 'h' || expand('%:e') == 'hpp'
                     execute "%s/this_should_be_replaced/\\=toupper('" . expand('%:t') . "')" . "/e"
                     execute "%s/\\./_" . "/e"
-                elseif expand('%:e') == 'c' || expand('%:e') == 'cpp'
+                elseif expand('%:e') == 'c' || expand('%:e') == 'cpp' || expand('%:e') == 'cc'
                     execute "%s/this_should_be_replaced/" . expand('%:t:r') . "/e"
                 endif
             endif
@@ -57,7 +57,7 @@ augroup END
 
 
 let g:NERDTreeWinSize=24
-let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|\.hpp\|\.cpp\|makefile\|Makefile\|CMakeLists.txt\|\.html\)\@<!$[[file]]', 'bin']
+let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|\.hpp\|\.cpp\|\.cc\|makefile\|Makefile\|CMakeLists.txt\|\.html\)\@<!$[[file]]', 'bin']
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowLineNumbers=1
 
@@ -71,7 +71,8 @@ let g:ycm_semantic_triggers = {
             \   'h': [ '.', '->', '::' ],
             \   'c': [ '.', '->', '::' ],
             \   'hpp': [ '.', '->', '::' ],
-            \   'cpp': [ '.', '->', '::' ]
+            \   'cpp': [ '.', '->', '::' ],
+            \   'cc': [ '.', '->', '::' ]
             \ }
 
 let g:Tlist_Use_Right_Window=1
@@ -174,7 +175,7 @@ nnoremap g<C-]> :call Jump('multi')<CR>
 
 """ Custom Search & Replace
 function! CustomGrepCore(target)
-    silent! execute 'vimgrep '.a:target.' **/*.h **/*.hpp **/*.c **/*.cpp'
+    silent! execute 'vimgrep '.a:target.' **/*.h **/*.hpp **/*.c **/*.cpp **/*.cc'
     return len(getqflist())
 endfunction
 
