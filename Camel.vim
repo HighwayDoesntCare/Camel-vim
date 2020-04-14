@@ -78,9 +78,9 @@ let g:ycm_semantic_triggers = {
 let g:Tlist_Use_Right_Window=1
 let g:Tlist_Auto_Open=1
 
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_enable_diagnostic_highlighting = 0
+"let g:ycm_show_diagnostics_ui = 0
+"let g:ycm_enable_diagnostic_signs = 0
+"let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=1
@@ -92,30 +92,21 @@ let g:ycm_server_keep_logfiles=1
 let g:ycm_server_log_level='debug'
 
 set statusline+=%#warningmsg#
-function! LinterStatus() abort
-    let l:counts = ale#statusline#Count(bufnr(''))
-    "let l:fst = ale#statusline#FirstProblem(bufnr(''), 'error')
+function! YCMStatusLine() abort
+    if exists(':YcmDiag')
+        let l:errCounts = youcompleteme#GetErrorCount()
+        let l:wrnCounts = youcompleteme#GetWarningCount()
 
-    let l:all_errors = l:counts.error + l:counts.style_error
-    let l:all_non_errors = l:counts.total - l:all_errors
-
-    return l:counts.total == 0 ? 'OK' : printf(
-    \   '%dW %dE',
-    \   all_non_errors,
-    \   all_errors
-    \)
+        return printf(
+        \   '%dW %dE',
+        \   wrnCounts,
+        \   errCounts,
+        \)
+    endif
+    return ''
 endfunction
-set statusline+=%{LinterStatus()}
+set statusline+=%{YCMStatusLine()}
 set statusline+=%*
-let g:ale_linters = {'c': ['gcc'], 'cpp': ['gcc']}
-let g:c_clangformat_executable = 'null'
-let g:ale_cpp_gcc_executable = 'g++'
-let g:ale_cpp_gcc_options = '-std=c++11'
-let g:ale_set_highlights = 0
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_completion_enabled = 0
 
 let g:NERDSpaceDelims=1
 let g:NERDCompactSexyComs=1

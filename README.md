@@ -97,7 +97,6 @@ https://github.com/VundleVim/Vundle.vim<br>
 https://github.com/Valloric/YouCompleteMe<br>
 https://github.com/rdnetto/YCM-Generator<br>
 https://github.com/scrooloose/nerdtree<br>
-https://github.com/dense-analysis/ale<br>
 https://github.com/ctrlpvim/ctrlp.vim<br>
 https://github.com/scrooloose/nerdcommenter<br>
 https://github.com/vim-scripts/taglist.vim<br>
