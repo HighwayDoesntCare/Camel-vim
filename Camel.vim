@@ -108,7 +108,6 @@ let g:ycm_server_log_level='debug'
 "set statusline+=%{YCMStatusLine()}
 "set statusline+=%*
 let g:airline#extensions#ycm#enabled = 1
-let g:airline_theme='onedark'
 
 let g:NERDSpaceDelims=1
 let g:NERDCompactSexyComs=1

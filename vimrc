@@ -71,6 +71,8 @@ hi Search cterm=bold ctermbg=DarkCyan ctermfg=White
 hi MatchParen cterm=underline ctermbg=NONE ctermfg=DarkCyan
 hi StatusLine ctermbg=White ctermfg=DarkGrey
 
+let g:airline_theme='minimalist'
+
 set matchpairs+=<:>
 
 
