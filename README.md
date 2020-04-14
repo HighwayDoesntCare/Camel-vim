@@ -100,6 +100,8 @@ https://github.com/scrooloose/nerdtree<br>
 https://github.com/ctrlpvim/ctrlp.vim<br>
 https://github.com/scrooloose/nerdcommenter<br>
 https://github.com/vim-scripts/taglist.vim<br>
+https://github.com/vim-airline/vim-airline<br>
+https://github.com/vim-airline/vim-airline-themes<br>
 https://github.com/rstacruz/sparkup<br>
 https://github.com/Yggdroot/indentLine<br>
 https://github.com/YvesZHI/vim-code-dark<br>
