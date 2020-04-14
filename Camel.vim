@@ -91,22 +91,24 @@ let g:ycm_global_ycm_extra_conf=$HOME."/.vim/.ycm_extra_conf.py"
 let g:ycm_server_keep_logfiles=1
 let g:ycm_server_log_level='debug'
 
-set statusline+=%#warningmsg#
-function! YCMStatusLine() abort
-    if exists(':YcmDiag')
-        let l:errCounts = youcompleteme#GetErrorCount()
-        let l:wrnCounts = youcompleteme#GetWarningCount()
-
-        return printf(
-        \   '%dW %dE',
-        \   wrnCounts,
-        \   errCounts,
-        \)
-    endif
-    return ''
-endfunction
-set statusline+=%{YCMStatusLine()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"function! YCMStatusLine() abort
+"    if exists(':YcmDiag') && exists("*youcompleteme#GetErrorCount")
+"        let l:errCounts = youcompleteme#GetErrorCount()
+"        let l:wrnCounts = youcompleteme#GetWarningCount()
+"
+"        return printf(
+"        \   '%dW %dE',
+"        \   wrnCounts,
+"        \   errCounts,
+"        \)
+"    endif
+"    return ''
+"endfunction
+"set statusline+=%{YCMStatusLine()}
+"set statusline+=%*
+let g:airline#extensions#ycm#enabled = 1
+let g:airline_theme='onedark'
 
 let g:NERDSpaceDelims=1
 let g:NERDCompactSexyComs=1

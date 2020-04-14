@@ -13,6 +13,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'taglist.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Yggdroot/indentLine'
 Plugin 'YvesZHI/vim-code-dark'
@@ -63,7 +65,7 @@ set t_Co=256
 set smc=600  " to limit the regular expression of syntax color to avoid huge calculation
 
 hi! Normal ctermbg=NONE guibg=NONE
-hi LineNr ctermfg=blue ctermbg=black
+hi LineNr ctermfg=DarkGrey ctermbg=black
 hi Visual cterm=bold ctermbg=DarkCyan ctermfg=White
 hi Search cterm=bold ctermbg=DarkCyan ctermfg=White
 hi MatchParen cterm=underline ctermbg=NONE ctermfg=DarkCyan
