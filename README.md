@@ -77,7 +77,7 @@ To get more information about usage, click on the links at the References below.
 
 ### Tips ###
 0) Edit the line 59 to 61 of `ycm_extra_conf.py` to change the searching path of YCM.<br>
-1) `:YcmGenerateConfig` has been executed automatically while enterning vim, it enables "goto declaration or definition" if `Makefile` or `CMakeLists.txt` is used. Re-execute it if necessary.<br>
+1) `:YcmGenerateConfig` has been executed automatically while enterning vim, it enables "goto declaration or definition" if `Makefile` or `CMakeLists.txt` is used. Re-execute it if necessary (`:YcmRestartServer` would be necessary in this case).<br>
 2) Edit the template files at `~/.vim/templates/` to customize the templates for `.h`, `.hpp`, `.c` and `.cpp`.<br>
 3) `<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.<br>
 4) For huge/distributed projects, use `<F12>` before `<C-]>` is recommended if possible.<br>
