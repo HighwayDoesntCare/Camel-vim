@@ -92,6 +92,8 @@ Custom names aren't recommended to use the used words in C++ Standard Library an
 The syntax highlight works based on the regular experssion. So long codes in one line may cause delay. To avoid this, the syntax highlight works on the lines with the length smaller than 600, the part of over 600 won't be highlighted.
 
 
+### USE YCM SYNTAX CHECKER INSTEAD OF SYNTASTIC IS RECOMMENDED --- NOT FINISHED YET ###
+
 
 ### References ###
 https://github.com/VundleVim/Vundle.vim<br>
