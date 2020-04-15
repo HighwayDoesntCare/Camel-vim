@@ -4,7 +4,7 @@ Camel-vim
 
 ### Introduction ###
 
-![alt text](https://github.com/YvesZHI/Pomme-c-vim/blob/master/sample.PNG)
+![alt text](https://github.com/YvesZHI/Camel-vim/blob/master/banner.txt)
 
 Camel-vim can build a vim-plugin-based environment for c/c++. It will install and configure YouCompleteMe and some other plugins.<br>
 It allows you to search and replace words, comment and uncomment codes.<br>
