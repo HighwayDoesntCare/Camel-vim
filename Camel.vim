@@ -1,8 +1,8 @@
 command Q qa
 command W w|qa
 "command Q call delete('.tags')|call delete('.clang-format')|qa
-"command Qone q|TlistClose
-"cnoreabbrev q Qone
+command Qone q|TlistClose
+cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
 
 set colorcolumn=120
@@ -76,7 +76,6 @@ let g:ycm_semantic_triggers = {
             \ }
 
 let g:Tlist_Use_Right_Window=1
-let g:Tlist_Auto_Open=1
 let g:Tlist_Show_One_File=1
 
 let g:ycm_show_diagnostics_ui = 0

@@ -20,7 +20,7 @@ VimC()
             esac
         done
     fi
-    vim --cmd 'let Camel=1'
+    vim --cmd 'let Camel=1' -o ~/.vim/banner.txt
 }
 
 alias vimc="VimC 100000" # 100MB
