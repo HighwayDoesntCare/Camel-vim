@@ -64,7 +64,7 @@ colorscheme codedark
 set t_Co=256
 set smc=600  " to limit the regular expression of syntax color to avoid huge calculation
 
-let g:airline_theme='minimalist'
+let g:airline_theme='sol'
 hi! Normal ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=DarkGrey ctermbg=black
 hi CursorLine cterm = NONE ctermbg=black
