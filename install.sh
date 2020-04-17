@@ -42,11 +42,9 @@ cp -r ./templates ~/.vim/
 grep -q vimc ~/.bashrc || cat vimc >> ~/.bashrc
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim -E -c PluginInstall -c q -c q
 
 git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
 ./install_YCM.sh
-
-vim -E -c PluginInstall -c q -c q
-
 
 echo "Done."
