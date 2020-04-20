@@ -71,6 +71,8 @@ Why "at the root of project"? To ensure that searching, jumping and formatting i
 `<C-o>`: go backword<br>
 `<C-i>`: go forward<br>
 
+`:ConqueGdb<CR>`: run ConqueGdb<br>
+
 To get more information about usage, click on the links at the References below.
 
 
@@ -107,3 +109,4 @@ https://github.com/rstacruz/sparkup<br>
 https://github.com/Yggdroot/indentLine<br>
 https://github.com/YvesZHI/vim-code-dark<br>
 https://github.com/YvesZHI/vim-cpp-enhanced-highlight<br>
+https://github.com/vim-scripts/Conque-GDB<br>
