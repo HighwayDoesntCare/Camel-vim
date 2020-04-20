@@ -5,6 +5,7 @@ command Qone q|TlistClose
 cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
 
+set signcolumn=yes
 set colorcolumn=120
 hi ColorColumn ctermbg=0 guibg=lightgrey
 set updatetime=4500
