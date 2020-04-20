@@ -19,6 +19,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Yggdroot/indentLine'
 Plugin 'YvesZHI/vim-code-dark'
 Plugin 'YvesZHI/vim-cpp-enhanced-highlight'
+Plugin 'vim-scripts/Conque-GDB'
 
 call vundle#end()
 

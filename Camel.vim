@@ -140,6 +140,10 @@ let g:cpp_concepts_highlight = 1
 "let g:formatdef_my_custom_cpp = '"clang-format -i ".@%'
 "let g:formatters_cpp = ['my_custom_cpp']
 
+let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color
+let g:ConqueTerm_CloseOnEnd = 1    " close conque when program ends running
+let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly
+
 nnoremap cgt :wa<CR> \| :2,$tabdo :tabc<CR> \| <C-w><C-j> :q<CR>
 nmap <leader>cv <leader>ca<leader>cc<leader>ca
 

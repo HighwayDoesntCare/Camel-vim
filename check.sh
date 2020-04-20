@@ -15,6 +15,7 @@ hash vim 2>/dev/null || { echo >&2 "vim is not installed.  Aborting."; exit 1; }
 hash autoreconf 2>/dev/null || { echo >&2 "automake is not installed.  Aborting."; exit 1; }
 hash pkg-config 2>/dev/null || { echo >&2 "pkg-config is not installed.  Aborting."; exit 1; }
 hash ctags 2>/dev/null || { echo >&2 "ctags is not installed.  Aborting."; exit 1; }
+hash gdb 2>/dev/null || { echo >&2 "gdb is not installed.  Aborting."; exit 1; }
 py_version=$(python --version 2>&1)
 #py_version="Python 2.7.12"
 if [[ ! ${py_version} =~ ^Python[[:space:]]2.* ]]; then
