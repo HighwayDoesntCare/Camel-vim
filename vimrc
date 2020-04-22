@@ -80,7 +80,23 @@ nnoremap <C-k> kddpk
 nnoremap <C-j> ddp
 nnoremap <C-a> ggvG$
 nnoremap <C-v><C-a> gg<C-v>G$
-inoremap <C-v><C-v> <left><CR><C-o>O
+
+"function! AutoIndent()
+"    startinsert
+"    call feedkeys("\<CR>")
+"    call feedkeys("\<Esc>")
+"    call feedkeys("\<C-o>O")
+"endfunction
+"inoremap } }<Esc>:call AutoIndent()<CR>
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap < <><left>
+inoremap { {}<left>
+inoremap {{ {}<left><CR><C-o>O
+inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 let g:indentLine_enabled = 0
 
