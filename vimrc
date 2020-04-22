@@ -79,7 +79,7 @@ nnoremap <C-k> kddpk
 nnoremap <C-j> ddp
 nnoremap <C-a> ggvG$
 nnoremap <C-v><C-a> gg<C-v>G$
-inoremap <C-v><Enter> <CR><C-o>O
+inoremap <C-v><Enter> <left><CR><C-o>O
 
 let g:indentLine_enabled = 0
 
