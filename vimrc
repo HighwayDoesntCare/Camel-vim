@@ -93,7 +93,7 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap < <><left>
 inoremap { {}<left>
-inoremap } {}<left><CR><C-o>O
+inoremap }} {}<left><CR><C-o>O
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 let g:indentLine_enabled = 0
