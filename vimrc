@@ -16,6 +16,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'taglist.vim'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Yggdroot/indentLine'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'YvesZHI/vim-code-dark'
 Plugin 'YvesZHI/vim-cpp-enhanced-highlight'
 Plugin 'vim-scripts/Conque-GDB'
@@ -87,13 +88,13 @@ nnoremap <C-v><C-a> gg<C-v>G$
 "endfunction
 "inoremap } }<Esc>:call AutoIndent()<CR>
 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap < <><left>
-inoremap { {}<left>
-inoremap }} {}<left><CR><C-o>O
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap < <><left>
+"inoremap { {}<left>
+"inoremap }} {}<left><CR><C-o>O
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 let g:indentLine_enabled = 0
