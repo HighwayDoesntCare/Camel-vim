@@ -1,8 +1,8 @@
 command Q qa
 command W w|qa
 "command Q call delete('.tags')|call delete('.clang-format')|qa
-command Qone q|TlistClose
-cnoreabbrev q Qone
+"command Qone q|TlistClose
+"cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
 
 set signcolumn=yes
@@ -22,6 +22,7 @@ let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 autocmd VimEnter * NERDTree
 autocmd VimEnter * silent! !eval '~/.vim/bundle/YCM-Generator/config_gen.py . >/dev/null 2>&1 &'
 autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format .ycm_extra_conf.py'
+autocmd WinLeave * silent! TlistClose
 
 set tags=.tags
 if has('macunix')
