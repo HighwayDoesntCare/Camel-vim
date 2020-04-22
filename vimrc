@@ -76,12 +76,15 @@ hi StatusLine ctermbg=White ctermfg=DarkGrey
 
 set matchpairs+=<:>
 
-
 nnoremap <C-k> kddpk
 nnoremap <C-j> ddp
 nnoremap <C-a> ggvG$
 nnoremap <C-v><C-a> gg<C-v>G$
-inoremap <C-v><Enter> <left><CR><C-o>O
+inoremap VV <left><CR><C-o>O
+inoremap <C-h> <left>
+inoremap <C-j> <down>
+inoremap <C-k> <up>
+inoremap <C-l> <right>
 
 let g:indentLine_enabled = 0
 
