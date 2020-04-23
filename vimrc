@@ -81,7 +81,7 @@ nnoremap <C-k> kddpk
 nnoremap <C-j> ddp
 nnoremap <C-a> ggvG$
 nnoremap <C-v><C-a> gg<C-v>G$
-inoremap <C-k> <Esc>
+inoremap <C-k> <Esc>:w<CR>
 
 "function! AutoIndent()
 "    startinsert
