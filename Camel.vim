@@ -85,6 +85,7 @@ let g:Tlist_Show_One_File=1
 "let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_min_num_of_chars_for_completion=1
 let g:ycm_cache_omnifunc=0
