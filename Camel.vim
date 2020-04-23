@@ -150,7 +150,8 @@ let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is c
 nnoremap cgt :wa<CR> \| :2,$tabdo :tabc<CR> \| <C-w><C-j> :q<CR>
 nmap <leader>cv <leader>ca<leader>cc<leader>ca
 
-nnoremap <F5> :wa<CR> \| :term ++kill=term<CR>
+"nnoremap <F5> :wa<CR> \| :term ++kill=term<CR>
+nnoremap <F5> :wa \| vertical botright term ++kill=term<CR>
 
 nnoremap <leader>tg :TlistToggle<CR>
 
