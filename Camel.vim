@@ -23,7 +23,7 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * execute "normal j"
 autocmd VimEnter * silent! !eval '~/.vim/bundle/YCM-Generator/config_gen.py . >/dev/null 2>&1 &'
 autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format .ycm_extra_conf.py'
-autocmd WinLeave * silent! TlistClose
+"autocmd WinLeave * silent! TlistClose
 
 set tags=.tags
 if has('macunix')
