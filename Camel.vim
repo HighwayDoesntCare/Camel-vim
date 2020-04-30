@@ -96,6 +96,13 @@ let g:ycm_global_ycm_extra_conf=$HOME."/.vim/.ycm_extra_conf.py"
 let g:ycm_server_keep_logfiles=1
 let g:ycm_server_log_level='debug'
 
+let g:ycm_filetype_whitelist = {
+			\ "c":1,
+			\ "cpp":1,
+			\ "sh":1,
+			\ "bash":1,
+			\ }
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
