@@ -32,6 +32,7 @@ rm -rf ~/.vim ~/.vimrc
 mkdir ~/.vim 2>/dev/null
 
 cp ./banner.txt ~/.vim/
+cp ./type ~/.vim/.type
 cp ./ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 cp ./clang-format.conf ~/.vim/
 cp ./*.vim ~/.vim/
