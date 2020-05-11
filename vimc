@@ -20,7 +20,14 @@ VimC()
             esac
         done
     fi
-    vim --cmd 'let Camel=1' -o ~/.vim/banner.txt
+    typeLanguage=`cata ~/.vim/.bype`
+    if [[ $typeLanguage == 'python' ]]; then
+        vim --cmd 'let Python=1' -o ~/.vim/banner.txt
+    elif [[ $typeLanguage == 'go' ]]; then
+        vim --cmd 'let Giraffa=1' -o ~/.vim/banner.txt
+    elif [[ $typeLanguage == 'cpp' ]]; then
+        vim --cmd 'let Camel=1' -o ~/.vim/banner.txt
+    fi
 }
 
 alias vimc="VimC 100000" # 100MB
