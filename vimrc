@@ -97,6 +97,9 @@ nnoremap <C-k> :w<CR>
 "inoremap }} {}<left><CR><C-o>O
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
+nnoremap + <C-w>>
+nnoremap - <C-w><
+
 let g:indentLine_enabled = 0
 
 if exists('Camel')
