@@ -46,6 +46,9 @@ Why "at the root of project"? To ensure that searching, jumping and formatting i
 `mb`: move cursor to bottom-right window<br>
 `mp`: move cursor to previous window<br>
 
+`+`: increase width of window towards left<br>
+`-`: decrease width of window towards right<br>
+
 `<C-j>`: <INSERT mode> move cursor backwards out of parenthesis<br>
 `<C-k>`: <INSERT mode or NORMAL mode> goto normal mode and save<br>
 
