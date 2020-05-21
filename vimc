@@ -20,7 +20,7 @@ VimC()
             esac
         done
     fi
-    typeLanguage=`cata ~/.vim/.bype`
+    typeLanguage=`cata ~/.vim/.type`
     if [[ $typeLanguage == 'python' ]]; then
         vim --cmd 'let Python=1' -o ~/.vim/banner.txt
     elif [[ $typeLanguage == 'go' ]]; then
