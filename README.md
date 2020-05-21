@@ -46,8 +46,8 @@ Why "at the root of project"? To ensure that searching, jumping and formatting i
 `mb`: move cursor to bottom-right window<br>
 `mp`: move cursor to previous window<br>
 
-`<C-j>`: switch current line with next line<br>
-`<C-k>`: switch current line with previous line<br>
+`<C-j>`: <INSERT mode> move cursor backwards out of parenthesis<br>
+`<C-k>`: <INSERT mode or NORMAL mode> goto normal mode and save<br>
 
 `\cc`: comment one line<br>
 `\cv`: comment one line with next delimiter<br>
