@@ -87,12 +87,6 @@ if exists('Camel')
 
     call vundle#end()
 
-    colorscheme codedark
-    set t_Co=256
-    set smc=600  " to limit the regular expression of syntax color to avoid huge calculation
-
-    let g:airline_theme='sol'
-
     source ~/.vim/Camel.vim
 endif
 

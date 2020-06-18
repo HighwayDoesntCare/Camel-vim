@@ -14,6 +14,10 @@ set completeopt-=preview
 set conceallevel=2
 set concealcursor=vin
 
+colorscheme codedark
+set t_Co=256
+set smc=600  " to limit the regular expression of syntax color to avoid huge calculation
+
 set rtp+=~/.vim/bundle/YouCompleteMe "YCM is installed with some error, so Vundle can't distinguish it automatically.
 
 let g:clang_c_options='-std=gun11'
