@@ -15,6 +15,10 @@ set conceallevel=2
 set concealcursor=vin
 set splitbelow
 
+colorscheme codedark
+set t_Co=256
+set smc=600  " to limit the regular expression of syntax color to avoid huge calculation
+
 set rtp+=~/.vim/bundle/YouCompleteMe "YCM is installed with some error, so Vundle can't distinguish it automatically.
 
 let g:clang_c_options='-std=gun11'
@@ -118,6 +122,7 @@ let g:ycm_filetype_whitelist = {
 "endfunction
 "set statusline+=%{YCMStatusLine()}
 "set statusline+=%*
+let g:airline_theme='sol'
 let g:airline#extensions#ycm#enabled = 1
 
 let g:NERDSpaceDelims=1
