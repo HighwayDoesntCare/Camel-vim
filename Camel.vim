@@ -24,10 +24,10 @@ set rtp+=~/.vim/bundle/YouCompleteMe "YCM is installed with some error, so Vundl
 let g:clang_c_options='-std=gun11'
 let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 
-augroup readonly
-    autocmd!
-    autocmd! BufReadPost ~/.vim/banner.txt setlocal readonly
-augroup END
+"augroup readonly
+"    autocmd!
+"    autocmd! BufReadPost ~/.vim/banner.txt setlocal readonly
+"augroup END
 
 autocmd VimEnter * NERDTree
 autocmd VimEnter * execute "normal j"
