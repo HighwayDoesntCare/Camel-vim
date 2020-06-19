@@ -30,10 +30,11 @@ let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 "augroup END
 
 autocmd VimEnter * NERDTree
+autocmd BufWinEnter * NERDTreeMirror
 autocmd VimEnter * execute "normal j"
 autocmd VimEnter * silent! !eval '~/.vim/bundle/YCM-Generator/config_gen.py . >/dev/null 2>&1 &'
 autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format .ycm_extra_conf.py'
-"autocmd WinLeave * silent! TlistClose
+autocmd BufWinLeave * silent! TlistClose
 
 set tags=.tags
 if has('macunix')
