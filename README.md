@@ -1,6 +1,7 @@
 Camel-vim
 ==========================
 
+# Switch to the branch vim8 if the version of your vim is 8 or higher is highly recommended.
 
 ### Introduction ###
 Camel-vim can build a vim-plugin-based environment for c/c++. It will install and configure YouCompleteMe and some other plugins.<br>
