@@ -79,6 +79,8 @@ if exists('Camel')
     Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'taglist.vim'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
     Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
     Plugin 'Yggdroot/indentLine'
     Plugin 'jiangmiao/auto-pairs'
