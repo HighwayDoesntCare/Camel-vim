@@ -121,6 +121,7 @@ let g:ycm_filetype_whitelist = {
 let g:airline_theme='sol'
 let g:airline#extensions#ycm#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=0
