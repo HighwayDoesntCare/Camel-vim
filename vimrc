@@ -63,6 +63,8 @@ inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 nnoremap + <C-w>>
 nnoremap - <C-w><
 
+command Qt tabclose
+
 if exists('Camel')
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
