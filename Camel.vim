@@ -30,6 +30,7 @@ let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 "augroup END
 
 autocmd VimEnter * NERDTree
+autocmd VimEnter * IndentLinesToggle
 autocmd BufWinEnter * NERDTreeMirror
 autocmd VimEnter * execute "normal j"
 autocmd VimEnter * silent! !eval '~/.vim/bundle/YCM-Generator/config_gen.py . >/dev/null 2>&1 &'
