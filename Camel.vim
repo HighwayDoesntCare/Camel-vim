@@ -133,6 +133,7 @@ let g:ycm_filetype_whitelist = {
 let g:airline_theme='sol'
 let g:airline#extensions#ycm#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:NERDSpaceDelims=1
 let g:NERDCompactSexyComs=1
