@@ -70,7 +70,9 @@ augroup END
 
 
 let g:NERDTreeWinSize=24
-let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|\.hpp\|\.cpp\|\.cc\|makefile\|Makefile\|CMakeLists.txt\|\.html\)\@<!$[[file]]', 'bin']
+let baseFileType='\.yaml\|\.yml\|\.json\|\.toml\|\.xml\|\.html\|\.sh'
+let currentFileType='\.h\|\.hpp\|\.c\|\.cpp\|\.cc\|makefile\|Makefile\|CMakeLists.txt'
+let NERDTreeIgnore=['\(' . currentFileType . '\|' . baseFileType . '\)\@<!$[[file]]', 'bin']
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowLineNumbers=1
 
