@@ -115,9 +115,13 @@ let g:ycm_filetype_whitelist = {
 			\ "bash":1,
 			\ }
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+let g:airline_theme='sol'
+let g:airline#extensions#ycm#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_open=1
