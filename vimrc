@@ -62,7 +62,6 @@ inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 nnoremap + <C-w>>
 nnoremap - <C-w><
-nnoremap noh :noh<CR>
 
 if exists('Camel')
     set rtp+=~/.vim/bundle/Vundle.vim
