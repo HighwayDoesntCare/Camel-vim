@@ -102,3 +102,4 @@ hi Visual cterm=bold ctermbg=DarkCyan ctermfg=White
 hi Search cterm=bold ctermbg=DarkCyan ctermfg=White
 hi MatchParen cterm=underline ctermbg=NONE ctermfg=DarkCyan
 hi StatusLine ctermbg=White ctermfg=DarkGrey
+hi Pmenu ctermbg=DarkGrey ctermfg=Yellow
