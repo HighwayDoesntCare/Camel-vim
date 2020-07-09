@@ -88,6 +88,7 @@ To get more information about usage, click on the links at the References below.
 5) If `tags file not ready` is printed while typing `<C-]>` or `g<C-]>`, it means that the file `.tags` hasn't been generated yet by `ctags`. It is probably because that the project is so huge that `ctags` needs some time to generate the `.tags`.<br>
 6) After typing `C-p` and selecting a file, type `F12` is recommanded to refresh the Nerdtree.<br>
 7) `<C-l>` may be necessary to refresh the whole vim interface after some operations, such as `<F6>`.
+8) `vim -Nu ~/.vim/bundle/YouCompleteMe/vimrc_ycm_minimal xxx.cpp` to get minimal vim configuration for YCM to debug YCM.
 
 
 ### About syntax highlight ###
