@@ -90,6 +90,7 @@ To get more information about usage, click on the links at the References below.
 6) After typing `C-p` and selecting a file, type `F12` is recommanded to refresh the Nerdtree.<br>
 7) `:help syntastic_quiet_messages` to avoid unexpected error messages from syntastic.<br>
 8) `<C-l>` may be necessary to refresh the whole vim interface after some operations, such as `<F6>`.
+9) `vim -Nu ~/.vim/bundle/YouCompleteMe/vimrc_ycm_minimal xxx.cpp` to get minimal vim configuration for YCM to debug YCM.
 
 
 ### About syntax highlight ###
