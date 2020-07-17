@@ -9,6 +9,8 @@ It allows you to jump to header file, to declaration and to definition recusivel
 It allows you to create files with templates.<br>
 It allows you to format codes with K&R style.
 
+### Tested OS list
+Ubuntu 18.04
 
 ### Installation ###
 Camel-vim supports vim 7 and vim 8. The branch master is for vim 7 and the branch vim8 is for vim 8.<br>
