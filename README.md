@@ -3,6 +3,9 @@ Camel-vim
 
 # Switch to the branch vim8 if the version of your vim is 8 or higher is highly recommended.
 
+### Tested OS list
+Ubuntu 18.04
+
 ### Introduction ###
 Camel-vim can build a vim-plugin-based environment for c/c++. It will install and configure YouCompleteMe and some other plugins.<br>
 It allows you to search and replace words, comment and uncomment codes.<br>
