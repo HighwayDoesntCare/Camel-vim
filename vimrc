@@ -89,8 +89,9 @@ if exists('Camel')
     Plugin 'vim-scripts/Conque-GDB'
 
     call vundle#end()
-
-	source ~/.vim/Camel.vim
+    if !exists('install')
+        source ~/.vim/Camel.vim
+    endif
 endif
 
 " The color settings must be at the end of file
