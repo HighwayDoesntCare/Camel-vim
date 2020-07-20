@@ -106,4 +106,5 @@ hi DiffChange cterm=bold ctermbg=darkblue ctermfg=Black
 hi MatchParen cterm=underline ctermbg=NONE ctermfg=DarkCyan
 hi StatusLine ctermbg=White ctermfg=DarkGrey
 hi Pmenu ctermbg=DarkGrey ctermfg=Yellow
-
+set cursorline
+hi CursorLine cterm=bold ctermbg=black
