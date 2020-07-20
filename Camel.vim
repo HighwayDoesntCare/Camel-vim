@@ -29,11 +29,21 @@ let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 "    autocmd! BufReadPost ~/.vim/banner.txt setlocal readonly
 "augroup END
 
-autocmd VimEnter * NERDTree
-autocmd VimEnter * execute "normal j"
+autocmd BufWinLeave * silent! TlistClose
 autocmd VimEnter * silent! !eval '~/.vim/bundle/YCM-Generator/config_gen.py . >/dev/null 2>&1 &'
 autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format .ycm_extra_conf.py'
-autocmd BufWinLeave * silent! TlistClose
+autocmd VimEnter * NERDTree
+autocmd VimEnter * execute "normal j"
+autocmd VimEnter * execute "call DeleteBufferImg()"
+function! BufferDelete(id)
+    if bufnr('$') > 2
+        execute "bd1"
+        call timer_stop(a:id)
+    endif
+endfunction
+function! DeleteBufferImg()
+    let t = timer_start(2200, 'BufferDelete', {'repeat': -1})
+endfunction
 
 set tags=.tags
 if has('macunix')
