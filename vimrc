@@ -98,11 +98,12 @@ endif
 " The color settings must be at the end of file
 hi! Normal ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=blue ctermbg=black
-hi Visual cterm=bold ctermbg=White ctermfg=Black
-hi Search cterm=bold ctermbg=White ctermfg=Black
+hi Visual cterm=bold ctermbg=blue ctermfg=Black
+hi Search cterm=bold ctermbg=lightyellow ctermfg=Black
 hi DiffAdd cterm=bold ctermbg=Red ctermfg=White
 hi DiffDelete cterm=bold ctermbg=White ctermfg=Black
 hi DiffText cterm=bold ctermbg=Yellow ctermfg=Black
+hi DiffChange cterm=bold ctermbg=darkblue ctermfg=Black
 hi MatchParen cterm=underline ctermbg=NONE ctermfg=DarkCyan
 hi StatusLine ctermbg=White ctermfg=DarkGrey
 hi Pmenu ctermbg=DarkGrey ctermfg=Yellow
