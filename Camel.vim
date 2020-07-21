@@ -42,7 +42,8 @@ else
     autocmd VimEnter * silent! !eval 'cp ~/.vim/clang-format.conf ./.clang-format; ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
     au BufWritePost *.h,*.c,*.cpp,*.hpp,*.cc silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -o newtags; mv newtags .tags'
 endif
-autocmd CursorHold,CursorHoldI * update
+
+"autocmd CursorHold,CursorHoldI * update
 
 autocmd FileType c,cpp,cc setlocal equalprg=clang-format
 
