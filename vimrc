@@ -104,7 +104,7 @@ hi DiffAdd cterm=bold ctermbg=Red ctermfg=White
 hi DiffDelete cterm=bold ctermbg=White ctermfg=Black
 hi DiffText cterm=bold ctermbg=Yellow ctermfg=Black
 hi DiffChange cterm=bold ctermbg=darkblue ctermfg=Black
-hi MatchParen cterm=underline ctermbg=NONE ctermfg=DarkCyan
+hi MatchParen cterm=underline ctermbg=DarkCyan ctermfg=White
 hi StatusLine ctermbg=White ctermfg=DarkGrey
 hi Pmenu ctermbg=DarkGrey ctermfg=Yellow
 set cursorline
